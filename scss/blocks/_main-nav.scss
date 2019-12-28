@@ -1,0 +1,39 @@
+.main-navigation {
+	font-weight: config( typography, primary, weights, bold );
+
+	a {
+		color: inherit !important;
+		padding: calc-rem( config( spacing, base ) );
+	}
+
+	li:hover > a {
+	 	color: config( colors, primary, base ) !important;
+	}
+}
+
+
+.main-navigation {
+	@extend %container;
+
+	@media screen and (min-width: #{ config( grid, breakpoints, lg ) } ) {
+		position: absolute;
+		top: 0;
+		right: 0;
+		text-align: right;
+	}
+
+	.menu {
+
+		@media screen and (min-width: #{ config( grid, breakpoints, lg ) } ) {
+			li {
+				display: inline-block;
+				position: relative;
+			}
+		}
+	}
+}
+
+
+.page-navigation-container li {
+	float: none;
+}

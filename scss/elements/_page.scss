@@ -1,0 +1,56 @@
+/**
+ * 	 __        ______ ____  _   _ _____ 
+ *   \ \      / / ___| __ )| \ | | ____|
+ *    \ \ /\ / / |   |  _ \|  \| |  _|  
+ *     \ V  V /| |___| |_) | |\  | |___ 
+ *      \_/\_/  \____|____/|_| \_|_____|
+ *
+ *	Elements: Page setup                     
+ */
+
+%text-style--primary {
+	font-family: config( typography, primary, face );
+	font-size: 1rem;
+	line-height: 1.5;
+}
+
+%text-style--lede {
+	font-size: calc-rem( config( typography, primary, sizes, large ) );
+}
+
+%text-style--large-headings {
+	font-family: config( typography, secondary, face );
+	font-weight: config( typography, secondary, weights, regular );
+}
+
+%text-style--h1 {
+	@extend %text-style--large-headings;
+	font-size: calc-rem( config( typography, secondary, sizes, large ) );
+}
+
+%text-style--h2 {
+	@extend %text-style--large-headings;
+	font-size: calc-rem( config( typography, secondary, sizes, base ) );
+}
+
+%text-style--h3 {
+	font-weight: config( typography, primary, weights, black );
+	font-size: calc-rem( config( typography, primary, sizes, huge ) );
+}
+
+%text-style--h4 {
+	font-weight: config( typography, primary, weights, bold );
+	font-size: calc-rem( config( typography, primary, sizes, base ) );
+	text-transform: uppercase;
+}
+
+html {
+	@extend %text-style--primary;
+	background-color: config( colors, page, base );
+	color: config( colors, page, contrast );
+}
+
+
+.has-medium-font-size {
+	@extend %text-style--lede;
+}

@@ -1,0 +1,53 @@
+/**
+ * 	 __        ______ ____  _   _ _____ 
+ *   \ \      / / ___| __ )| \ | | ____|
+ *    \ \ /\ / / |   |  _ \|  \| |  _|  
+ *     \ V  V /| |___| |_) | |\  | |___ 
+ *      \_/\_/  \____|____/|_| \_|_____|
+ *
+ *	Blocks: Site Header               
+ */
+
+.site-header {
+	position: relative;
+	z-index: 5;
+	margin-bottom: -6rem;
+}
+
+.custom-header {
+	@extend %container;
+}
+
+
+.site-title,
+.site-description {
+	display: none;
+}
+
+
+.custom-logo-link {
+	display: block;
+	max-width: calc-rem( 120px );
+	position: relative;
+	z-index: 5;
+	padding: calc-rem( config( spacing, base ) * 1.5 ) 0 calc-rem( config( spacing, base ) ) 0;
+}
+
+
+.site-branding {
+	position: relative;
+
+	&:before {
+		content: "";
+		display: inline-block;
+		width: 100vw;
+		left: -100vw;
+		margin-left: 10em;
+		height: 100%;
+		top: 0;
+		background-color: config( colors, dark, base );
+		color: config( colors, dark, contrast );
+		position: absolute;
+		z-index: 0;
+	}
+}

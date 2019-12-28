@@ -1,0 +1,47 @@
+/**
+ * 	 __        ______ ____  _   _ _____ 
+ *   \ \      / / ___| __ )| \ | | ____|
+ *    \ \ /\ / / |   |  _ \|  \| |  _|  
+ *     \ V  V /| |___| |_) | |\  | |___ 
+ *      \_/\_/  \____|____/|_| \_|_____|
+ *
+ *	Functions: Core functions                   
+ */
+
+
+@function getConfig() {
+	@return $config;
+}
+
+
+/**
+ * Get configuration information
+ * @param  string $keys... A string of keys
+ * @return mixed           Map or string for the requested keys
+ */
+@function config( $keys... ) {
+	$map: getConfig();
+	@each $key in $keys {
+        $map: map-get( $map, $key );
+        @if ( $map == null ) {
+        	@return false;
+        }
+    }
+    @return $map;
+}
+
+
+/**
+ * Get a colour
+ * @param  string $shade:   primary       [description]
+ * @param  string $variant: base          [description]
+ * @return string           [description]
+ */
+@function color( $shade: primary, $variant: base ) {
+	@return config( colors, $shade, $variant );
+}
+
+
+@function calc-rem( $size, $base: 16px ) {
+    @return ( $size / $base ) * 1rem;
+}

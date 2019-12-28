@@ -1,0 +1,71 @@
+$config: (
+	colors: (
+		page: (
+			base: #f6f9fa,
+			alt: #f0f0f1,
+			contrast: #1f1f1f,
+		),
+		alt: (
+			base: #f0f0f1,
+			alt: #d0d9e4,
+			contrast: #1f1f1f,
+		),
+		dark: (
+			base: #1f1f1f,
+			alt: #141414,
+			contrast: #f8f8f8,
+		),
+		primary: (
+			base: #8953ac,
+			alt: #8c46a3,
+			contrast: #f8f8f8,
+		),
+		secondary: (
+			base: #c3e1e0,
+			alt: #aacbcc,
+			contrast: #0f3138,
+		),
+	),
+	typography: (
+		primary: (
+			face: Raleway,
+			weights: (
+				regular: 300,
+				bold: 600,
+				black: 900,
+			),
+			sizes: (
+				base: 16px,
+				small: 14px,
+				large: 24px,
+				huge: 30px,
+			),
+		),
+		secondary: (
+			face: 'Playfair Display',
+			weights: (
+				regular: 900,
+			),
+			sizes: (
+				base: 48px,
+				large: 90px,
+			),
+		),
+	),
+	spacing: (
+		base: 24px,
+	),
+	grid: (
+		columns: 12,
+		gutter: 30px,
+		page-gutter: 20px,
+		fluid: true,
+		container: 1170px,
+		breakpoints: (
+			sm: 540px,
+			md: 768px,
+			lg: 992px,
+			xl: 1280px,
+		),
+	)
+);

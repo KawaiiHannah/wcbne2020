@@ -1,0 +1,43 @@
+.entry-header {
+	@extend %background-cover;
+	position: relative;
+	padding-top: 40%;
+	padding-bottom: 30%;
+	background-image: url('../img/wcbne-hero-default.jpg');
+
+	&:before,
+	&:after {
+		content: "";
+		display: block;
+		width: 100%;
+		height: 0;
+		position: absolute;
+		background-size: contain;
+		left: 0;
+	}
+
+	&:before {
+		padding-bottom: 73.3125%;
+		background-image: url('../img/image-mask-top.png');
+		background-position: top center;
+		top: 0;
+	}
+
+	&:after {
+		padding-bottom: 60.75%;
+		background-image: url('../img/image-mask.png');
+		background-position: bottom center;
+		bottom: 0;
+	}
+}
+
+
+.entry-title {
+	@extend %container;
+	position: relative;
+	z-index: 5;
+
+	@media screen and (min-width: #{ config( grid, breakpoints, lg ) } ) {
+		font-size: calc-rem( 160px );
+	}
+}
