@@ -10,7 +10,7 @@
 
 .site-header {
 	position: relative;
-	z-index: 5;
+	z-index: 10;
 	margin-bottom: -6rem;
 }
 
@@ -29,7 +29,7 @@
 	display: block;
 	max-width: calc-rem( 120px );
 	position: relative;
-	z-index: 5;
+	z-index: 10;
 	padding: calc-rem( config( spacing, base ) * 1.5 ) 0 calc-rem( config( spacing, base ) ) 0;
 }
 

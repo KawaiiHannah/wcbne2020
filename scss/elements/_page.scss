@@ -46,9 +46,10 @@
 
 html {
 	@extend %text-style--primary;
-	font-weight: config( typography, primary, weights, light );
+	font-weight: config( typography, primary, weights, regular );
 	background-color: config( colors, page, base );
 	color: config( colors, page, contrast );
+	line-height: 1.5;
 }
 
 body {
