@@ -3,7 +3,7 @@
 	position: relative;
 	padding-top: 40%;
 	padding-bottom: 30%;
-	background-image: url('../img/wcbne-hero-default.jpg');
+	background-image: url('https://2020.brisbane.wordcamp.org/files/2019/12/wcbne-hero-default.jpg');
 
 	&:before,
 	&:after {
@@ -18,14 +18,14 @@
 
 	&:before {
 		padding-bottom: 73.3125%;
-		background-image: url('../img/image-mask-top.png');
+		background-image: url('https://2020.brisbane.wordcamp.org/files/2019/12/image-mask-top.png');
 		background-position: top center;
 		top: 0;
 	}
 
 	&:after {
 		padding-bottom: 60.75%;
-		background-image: url('../img/image-mask.png');
+		background-image: url('https://2020.brisbane.wordcamp.org/files/2019/12/image-mask.png');
 		background-position: bottom center;
 		bottom: 0;
 	}
