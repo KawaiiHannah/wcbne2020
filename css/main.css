@@ -498,8 +498,8 @@ html {
 .home-hero .wp-block-cover__inner-container {
   color: #1f1f1f; }
 
-.honme-hero:before {
-  display: none; }
+.home-hero:before {
+  display: none !important; }
 
 .entry-title {
   position: relative;
