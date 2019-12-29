@@ -13,8 +13,12 @@
 .home-hero {
 	@extend %background-cover;
 	position: relative;
-	padding-top: 40%;
+	padding-top: 60%;
 	padding-bottom: 30%;
+
+	@media screen and (min-width: #{ config( grid, breakpoints, md ) } ) {
+		padding-top: 40%;
+	}
 
 	@media screen and (min-width: #{ config( grid, breakpoints, xl ) } ) {
 		background-attachment: fixed;

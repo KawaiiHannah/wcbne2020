@@ -54,6 +54,26 @@
 
 	.menu {
 
+		.sub-menu {
+			position: static;
+			float: none;
+			max-height: 0;
+			transition: max-height .2s ease;
+			overflow: hidden;
+
+			@media screen and ( max-width: #{ config( grid, breakpoints, lg ) - 1 } ) {
+				box-shadow: none;
+
+				a {
+					padding-left: calc-rem( config( spacing, base ) * 1.5 );
+				}
+			}
+		}
+
+		.dropdown-toggle[aria-expanded="true"] + .sub-menu {
+			max-height: 100rem;
+		}
+
 		@media screen and ( min-width: #{ config( grid, breakpoints, lg ) } ) {
 			li {
 				display: inline-block;
@@ -63,6 +83,8 @@
 			.sub-menu {
 				top: 100%;
 				left: 0;
+				position: absolute;
+				max-height: none;
 
 				.sub-menu {
 					top: 0;
@@ -110,6 +132,24 @@
 }
 
 
+.dropdown-toggle {
+	width: calc-rem( 48px );
+	height: calc-rem( 48px );
+
+	&:before {
+		content: "";
+		display: inline-block; 
+		width: .75rem;
+		height: .75rem;
+		position: relative;
+		top: -.3em;
+		border-bottom: 2px solid currentcolor;
+		border-right: 2px solid currentcolor;
+		transform: rotate( 45deg );
+	}
+}
+
+
 .menu-toggle {
 	text-indent: -999px;
 	overflow: hidden;
@@ -123,7 +163,7 @@
 		height: calc-rem( 40px );
 		right: calc-rem( ( 85px - 40px ) / 2 );
 		top: calc-rem( ( 85px - 40px ) / 2 );
-		margin-top: calc-rem( config( spacing, base ) * .5 );
+		margin-top: calc-rem( config( spacing, base ) * .25 );
 		background-size: contain;
 		background-position: center;
 		background-repeat: no-repeat;
