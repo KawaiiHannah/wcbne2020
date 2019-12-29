@@ -75,7 +75,10 @@
 
 .entry-title:after {
 	@extend %text-style--primary;
+	display: block;
+	font-weight: config( typography, primary, weights, bold );
 	content: "WordCamp Brisbane 2020";
+	margin-top: 1rem;
 }
 
 

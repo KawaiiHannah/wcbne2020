@@ -414,6 +414,14 @@ body {
 p {
   margin-bottom: 1.5rem; }
 
+.entry-content {
+  margin-top: -20%;
+  position: relative;
+  z-index: 5; }
+
+.home .entry-content {
+  margin-top: 0; }
+
 .alignfull {
   max-width: none !important; }
 
@@ -535,7 +543,10 @@ p {
   z-index: 5; }
 
 .entry-title:after {
-  content: "WordCamp Brisbane 2020"; }
+  display: block;
+  font-weight: 600;
+  content: "WordCamp Brisbane 2020";
+  margin-top: 1rem; }
 
 @media screen and (min-width: 992px) {
   .entry-title,

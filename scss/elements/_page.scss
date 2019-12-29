@@ -59,6 +59,16 @@ p {
 	margin-bottom: calc-rem( config( spacing, base ) );
 }
 
+.entry-content {
+	margin-top: -20%;
+	position: relative;
+	z-index: 5;
+}
+
+.home .entry-content {
+	margin-top: 0;
+}
+
 .entry-content > * {
 	@extend %container;
 }
