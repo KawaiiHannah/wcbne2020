@@ -410,7 +410,8 @@ html {
   line-height: 1.5; }
 
 body {
-  background-color: transparent; }
+  background-color: transparent;
+  line-height: inherit; }
 
 p {
   margin-bottom: 1.5rem; }
@@ -422,6 +423,10 @@ p {
 
 .home .entry-content {
   margin-top: 0; }
+
+.entry-content > * {
+  position: relative;
+  z-index: 5; }
 
 .alignfull {
   max-width: none !important; }
@@ -460,9 +465,11 @@ p {
  *	Blocks: Site Header               
  */
 .site-header {
-  position: relative;
+  position: fixed;
   z-index: 10;
-  margin-bottom: -6rem; }
+  width: 100%;
+  top: 0;
+  left: 0; }
 
 .site-title,
 .site-description {
@@ -502,6 +509,10 @@ p {
   position: relative;
   padding-top: 40%;
   padding-bottom: 30%; }
+  @media screen and (min-width: 1280px) {
+    .entry-header,
+    .home-hero {
+      background-attachment: fixed; } }
   .entry-header:before, .entry-header:after,
   .home-hero:before,
   .home-hero:after {
@@ -528,9 +539,10 @@ p {
 .home-hero .wp-block-cover__inner-container {
   color: #1f1f1f; }
 
-.home-hero + * {
+.hone-hero {
+  margin-top: -25%;
   position: relative;
-  z-index: 5; }
+  z-index: 0; }
 
 .site-main {
   margin-top: -20%; }
@@ -574,7 +586,8 @@ p {
   .main-navigation {
     position: absolute;
     top: 0;
-    right: 0;
+    left: 50%;
+    transform: translateX(-50%);
     text-align: right; } }
 
 @media screen and (min-width: 992px) {

@@ -54,6 +54,7 @@ html {
 
 body {
 	background-color: transparent;
+	line-height: inherit;
 }
 
 p {
@@ -72,6 +73,8 @@ p {
 
 .entry-content > * {
 	@extend %container;
+	position: relative;
+	z-index: 5;
 }
 
 .alignfull {
