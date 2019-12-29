@@ -416,7 +416,7 @@ html {
  *
  *	Elements: Headings                     
  */
-.custom-header, .entry-title, .main-navigation,
+.custom-header, .home-hero .wp-block-cover__inner-container, .entry-title, .main-navigation,
 .container {
   max-width: 1170px;
   padding-left: 20px;
@@ -465,11 +465,16 @@ html {
     z-index: 0; }
 
 .entry-header {
+  background-image: url("https://2020.brisbane.wordcamp.org/files/2019/12/wcbne-hero-default.jpg"); }
+
+.entry-header,
+.home-hero {
   position: relative;
   padding-top: 40%;
-  padding-bottom: 30%;
-  background-image: url("../img/wcbne-hero-default.jpg"); }
-  .entry-header:before, .entry-header:after {
+  padding-bottom: 30%; }
+  .entry-header:before, .entry-header:after,
+  .home-hero:before,
+  .home-hero:after {
     content: "";
     display: block;
     width: 100%;
@@ -477,23 +482,30 @@ html {
     position: absolute;
     background-size: contain;
     left: 0; }
-  .entry-header:before {
+  .entry-header:before,
+  .home-hero:before {
     padding-bottom: 73.3125%;
-    background-image: url("../img/image-mask-top.png");
+    background-image: url("https://2020.brisbane.wordcamp.org/files/2019/12/image-mask-top.png");
     background-position: top center;
     top: 0; }
-  .entry-header:after {
+  .entry-header:after,
+  .home-hero:after {
     padding-bottom: 60.75%;
-    background-image: url("../img/image-mask.png");
+    background-image: url("https://2020.brisbane.wordcamp.org/files/2019/12/image-mask.png");
     background-position: bottom center;
     bottom: 0; }
 
 .entry-title {
   position: relative;
   z-index: 5; }
-  @media screen and (min-width: 992px) {
-    .entry-title {
-      font-size: 10rem; } }
+
+@media screen and (min-width: 992px) {
+  .entry-title,
+  .home-hero h1 {
+    font-size: 10rem; } }
+
+.home .entry-header {
+  display: none; }
 
 .main-navigation {
   font-weight: 600; }
@@ -518,7 +530,8 @@ html {
 .page-navigation-container li {
   float: none; }
 
-.entry-header {
+.entry-header,
+.home-hero {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center; }

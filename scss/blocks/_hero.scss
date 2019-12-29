@@ -1,9 +1,13 @@
 .entry-header {
+	background-image: url('https://2020.brisbane.wordcamp.org/files/2019/12/wcbne-hero-default.jpg');
+}
+
+.entry-header,
+.home-hero {
 	@extend %background-cover;
 	position: relative;
 	padding-top: 40%;
 	padding-bottom: 30%;
-	background-image: url('https://2020.brisbane.wordcamp.org/files/2019/12/wcbne-hero-default.jpg');
 
 	&:before,
 	&:after {
@@ -32,12 +36,26 @@
 }
 
 
+.home-hero .wp-block-cover__inner-container {
+	@extend %container;
+}
+
+
 .entry-title {
 	@extend %container;
 	position: relative;
 	z-index: 5;
+}
 
+
+.entry-title,
+.home-hero h1 {
 	@media screen and (min-width: #{ config( grid, breakpoints, lg ) } ) {
 		font-size: calc-rem( 160px );
 	}
+}
+
+
+.home .entry-header {
+	display: none;
 }
