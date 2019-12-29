@@ -66,6 +66,10 @@
 		font-size: calc-rem( 160px );
 		line-height: .875;
 	}
+
+	+ * {
+		margin-top: calc-rem( config( spacing, base ) );
+	}
 }
 
 

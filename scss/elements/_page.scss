@@ -46,10 +46,14 @@
 
 html {
 	@extend %text-style--primary;
+	font-weight: config( typography, primary, weights, light );
 	background-color: config( colors, page, base );
 	color: config( colors, page, contrast );
 }
 
+p {
+	margin-bottom: calc-rem( config( spacing, base ) );
+}
 
 .has-medium-font-size {
 	@extend %text-style--lede;
