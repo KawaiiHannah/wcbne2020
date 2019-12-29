@@ -28,6 +28,7 @@
 		height: 0;
 		position: absolute;
 		background-size: contain;
+		background-repeat: no-repeat;
 		left: 0;
 	}
 
@@ -89,6 +90,13 @@
 
 .entry-title,
 .home-hero h1 {
+	line-height: .925;
+	font-size: calc-rem( 42px );
+
+	@media screen and (min-width: #{ config( grid, breakpoints, md ) } ) {
+		font-size: calc-rem( 90px );
+	}
+
 	@media screen and (min-width: #{ config( grid, breakpoints, lg ) } ) {
 		font-size: calc-rem( 160px );
 		line-height: .875;
@@ -102,4 +110,10 @@
 
 .home .entry-header {
 	display: none;
+}
+
+.wp-block-cover .wp-block-cover__inner-container {
+	width: 100%;
+	padding-left: 0;
+	padding-right: 0;
 }

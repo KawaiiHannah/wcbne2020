@@ -522,6 +522,7 @@ p {
     height: 0;
     position: absolute;
     background-size: contain;
+    background-repeat: no-repeat;
     left: 0; }
   .entry-header:before,
   .home-hero:before {
@@ -561,18 +562,30 @@ p {
   content: "WordCamp Brisbane 2020";
   margin-top: 1rem; }
 
-@media screen and (min-width: 992px) {
-  .entry-title,
-  .home-hero h1 {
-    font-size: 10rem;
-    line-height: .875; } }
-
-.entry-title + *,
-.home-hero h1 + * {
-  margin-top: 1.5rem; }
+.entry-title,
+.home-hero h1 {
+  line-height: .925;
+  font-size: 2.625rem; }
+  @media screen and (min-width: 768px) {
+    .entry-title,
+    .home-hero h1 {
+      font-size: 5.625rem; } }
+  @media screen and (min-width: 992px) {
+    .entry-title,
+    .home-hero h1 {
+      font-size: 10rem;
+      line-height: .875; } }
+  .entry-title + *,
+  .home-hero h1 + * {
+    margin-top: 1.5rem; }
 
 .home .entry-header {
   display: none; }
+
+.wp-block-cover .wp-block-cover__inner-container {
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0; }
 
 .main-navigation {
   font-weight: 600; }
@@ -615,35 +628,32 @@ p {
     overflow: auto; } }
 
 .menu-toggle {
-  background: transparent !important;
   border: none;
   outline: none;
   text-indent: -999px;
   overflow: hidden;
   position: absolute;
   top: 0;
-  right: 5.3125rem;
+  right: 0;
   height: 5.3125rem;
-  width: 8em;
+  width: 5.3125rem;
+  background-color: rgba(246, 249, 250, 0.75) !important;
   text-align: center; }
-  .menu-toggle:before, .menu-toggle:after {
+  .menu-toggle:after {
+    content: "";
+    background-image: url("https://2020.brisbane.wordcamp.org/files/2019/12/hamburger-icon.png");
+    width: 3.125rem;
+    height: 3.125rem;
+    right: 1rem;
+    top: 1rem;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
     text-indent: 0;
     position: absolute;
     top: 0;
-    display: inline-block; }
-  .menu-toggle:before {
-    content: "Open Menu";
-    width: inherit;
-    height: inherit;
-    right: 5.3125rem; }
-  .menu-toggle:after {
-    content: "";
-    width: 5.3125rem;
-    height: 5.3125rem;
     right: 0;
-    background-color: #8953ac; }
-  .menu-toggle[aria-expanded="true"]:before {
-    content: "Close Menu"; }
+    display: inline-block; }
   @media screen and (max-width: 991px) {
     .menu-toggle {
       display: block !important; } }

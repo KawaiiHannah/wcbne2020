@@ -67,43 +67,33 @@
 
 
 .menu-toggle {
-	background: transparent !important;
 	border: none;
 	outline: none;
 	text-indent: -999px;
 	overflow: hidden;
 	position: absolute;
 	top: 0;
-	right: calc-rem( 85px );
+	right: 0;
 	height: calc-rem( 85px );
-	width: 8em;
+	width: calc-rem( 85px );
+	background-color: rgba( config( colors, page, base ), .75 ) !important;
 	text-align: center;
-
-	&:before,
-	&:after {
-		text-indent: 0;
-		position: absolute;
-		top: 0;
-		display: inline-block;
-	}
-
-	&:before {
-		content: "Open Menu";
-		width: inherit;
-		height: inherit;
-		right: calc-rem( 85px );
-	}
 
 	&:after {
 		content: "";
-		width: calc-rem( 85px );
-		height: calc-rem( 85px );
+		background-image: url('https://2020.brisbane.wordcamp.org/files/2019/12/hamburger-icon.png');
+		width: calc-rem( 50px );
+		height: calc-rem( 50px );
+		right: 1rem;
+		top: 1rem;
+		background-size: contain;
+		background-position: center;
+		background-repeat: no-repeat;
+		text-indent: 0;
+		position: absolute;
+		top: 0;
 		right: 0;
-		background-color: config( colors, primary, base );
-	}
-
-	&[aria-expanded="true"]:before {
-		content: "Close Menu";
+		display: inline-block;
 	}
 
 	@media screen and ( max-width: #{ config( grid, breakpoints, lg ) - 1 } ) {
