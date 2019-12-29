@@ -3,6 +3,13 @@
 }
 
 .entry-header,
+.home .home-hero:first-of-type {
+	&:before {
+		top: 15%;
+	}
+}
+
+.entry-header,
 .home-hero {
 	@extend %background-cover;
 	position: relative;
@@ -42,6 +49,12 @@
 }
 
 
+.home-hero + * {
+	position: relative;
+	z-index: 5;
+}
+
+
 .site-main {
 	margin-top: -20%;
 }
@@ -57,6 +70,12 @@
 	@extend %container;
 	position: relative;
 	z-index: 5;
+}
+
+
+.entry-title:after {
+	@extend %text-style--primary;
+	content: "WordCamp Brisbane 2020";
 }
 
 

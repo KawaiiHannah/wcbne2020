@@ -370,7 +370,7 @@ textarea {
  *
  *	Elements: Page setup                     
  */
-html {
+html, .entry-title:after {
   font-family: Raleway;
   font-size: 1rem;
   line-height: 1.5; }
@@ -408,8 +408,14 @@ html {
   background-color: #f6f9fa;
   color: #1f1f1f; }
 
+body {
+  background-color: transparent; }
+
 p {
   margin-bottom: 1.5rem; }
+
+.alignfull {
+  max-width: none !important; }
 
 /**
  * 	 __        ______ ____  _   _ _____ 
@@ -478,6 +484,10 @@ p {
 .entry-header {
   background-image: url("https://2020.brisbane.wordcamp.org/files/2019/12/wcbne-hero-default.jpg"); }
 
+.entry-header:before,
+.home .home-hero:first-of-type:before {
+  top: 15%; }
+
 .entry-header,
 .home-hero {
   position: relative;
@@ -509,6 +519,10 @@ p {
 .home-hero .wp-block-cover__inner-container {
   color: #1f1f1f; }
 
+.home-hero + * {
+  position: relative;
+  z-index: 5; }
+
 .site-main {
   margin-top: -20%; }
 
@@ -519,6 +533,9 @@ p {
 .entry-title {
   position: relative;
   z-index: 5; }
+
+.entry-title:after {
+  content: "WordCamp Brisbane 2020"; }
 
 @media screen and (min-width: 992px) {
   .entry-title,

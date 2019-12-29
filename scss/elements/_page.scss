@@ -51,12 +51,20 @@ html {
 	color: config( colors, page, contrast );
 }
 
+body {
+	background-color: transparent;
+}
+
 p {
 	margin-bottom: calc-rem( config( spacing, base ) );
 }
 
 .entry-content > * {
 	@extend %container;
+}
+
+.alignfull {
+	max-width: none !important;
 }
 
 .has-medium-font-size {
