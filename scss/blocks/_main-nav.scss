@@ -9,13 +9,21 @@
 	li:hover > a {
 	 	color: config( colors, primary, base ) !important;
 	}
+
+	li {
+		text-align: left;
+	}
+
+	.menu > li > a {
+		padding: calc-rem( config( spacing, base ) ) calc-rem( config( spacing, base ) * 2 );
+	}
 }
 
 
 .main-navigation {
 	@extend %container;
 
-	@media screen and (min-width: #{ config( grid, breakpoints, lg ) } ) {
+	@media screen and ( min-width: #{ config( grid, breakpoints, lg ) } ) {
 		position: absolute;
 		top: 0;
 		left: 50%;
@@ -25,12 +33,81 @@
 
 	.menu {
 
-		@media screen and (min-width: #{ config( grid, breakpoints, lg ) } ) {
+		@media screen and ( min-width: #{ config( grid, breakpoints, lg ) } ) {
 			li {
 				display: inline-block;
 				position: relative;
 			}
+
+			> li {
+				margin-right: -4px;
+
+				> a {
+					background-color: rgba( config( colors, page, base ), .75 );
+				}
+			}
 		}
+	}
+}
+
+@media screen and ( max-width: #{ config( grid, breakpoints, lg ) - 1 } ) {
+	.menu-primary-container {
+		max-height: 0;
+		overflow: hidden;
+		opacity: 0;
+		transition: opacity .2s ease;
+	}
+
+	.menu-toggle[aria-expanded="true"] + .menu-primary-container {
+		max-height: 100vh;
+		opacity: 1;
+		overflow: auto;
+	}
+} 
+
+
+.menu-toggle {
+	background: transparent !important;
+	border: none;
+	outline: none;
+	text-indent: -999px;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	right: calc-rem( 85px );
+	height: calc-rem( 85px );
+	width: 8em;
+	text-align: center;
+
+	&:before,
+	&:after {
+		text-indent: 0;
+		position: absolute;
+		top: 0;
+		display: inline-block;
+	}
+
+	&:before {
+		content: "Open Menu";
+		width: inherit;
+		height: inherit;
+		right: calc-rem( 85px );
+	}
+
+	&:after {
+		content: "";
+		width: calc-rem( 85px );
+		height: calc-rem( 85px );
+		right: 0;
+		background-color: config( colors, primary, base );
+	}
+
+	&[aria-expanded="true"]:before {
+		content: "Close Menu";
+	}
+
+	@media screen and ( max-width: #{ config( grid, breakpoints, lg ) - 1 } ) {
+		display: block !important;
 	}
 }
 

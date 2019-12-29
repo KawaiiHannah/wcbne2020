@@ -581,6 +581,10 @@ p {
     padding: 1.5rem; }
   .main-navigation li:hover > a {
     color: #8953ac !important; }
+  .main-navigation li {
+    text-align: left; }
+  .main-navigation .menu > li > a {
+    padding: 1.5rem 3rem; }
 
 @media screen and (min-width: 992px) {
   .main-navigation {
@@ -593,7 +597,56 @@ p {
 @media screen and (min-width: 992px) {
   .main-navigation .menu li {
     display: inline-block;
-    position: relative; } }
+    position: relative; }
+  .main-navigation .menu > li {
+    margin-right: -4px; }
+    .main-navigation .menu > li > a {
+      background-color: rgba(246, 249, 250, 0.75); } }
+
+@media screen and (max-width: 991px) {
+  .menu-primary-container {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: opacity .2s ease; }
+  .menu-toggle[aria-expanded="true"] + .menu-primary-container {
+    max-height: 100vh;
+    opacity: 1;
+    overflow: auto; } }
+
+.menu-toggle {
+  background: transparent !important;
+  border: none;
+  outline: none;
+  text-indent: -999px;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  right: 5.3125rem;
+  height: 5.3125rem;
+  width: 8em;
+  text-align: center; }
+  .menu-toggle:before, .menu-toggle:after {
+    text-indent: 0;
+    position: absolute;
+    top: 0;
+    display: inline-block; }
+  .menu-toggle:before {
+    content: "Open Menu";
+    width: inherit;
+    height: inherit;
+    right: 5.3125rem; }
+  .menu-toggle:after {
+    content: "";
+    width: 5.3125rem;
+    height: 5.3125rem;
+    right: 0;
+    background-color: #8953ac; }
+  .menu-toggle[aria-expanded="true"]:before {
+    content: "Close Menu"; }
+  @media screen and (max-width: 991px) {
+    .menu-toggle {
+      display: block !important; } }
 
 .page-navigation-container li {
   float: none; }
