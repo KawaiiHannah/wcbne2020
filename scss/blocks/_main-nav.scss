@@ -84,15 +84,13 @@
 		background-image: url('https://2020.brisbane.wordcamp.org/files/2019/12/hamburger-icon.png');
 		width: calc-rem( 50px );
 		height: calc-rem( 50px );
-		right: 1rem;
-		top: 1rem;
+		right: calc-rem( ( 85px - 50px ) / 2 );
+		top: calc-rem( ( 85px - 50px ) / 2 );
 		background-size: contain;
 		background-position: center;
 		background-repeat: no-repeat;
 		text-indent: 0;
 		position: absolute;
-		top: 0;
-		right: 0;
 		display: inline-block;
 	}
 
