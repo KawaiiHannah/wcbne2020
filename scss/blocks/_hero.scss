@@ -64,6 +64,7 @@
 .home-hero h1 {
 	@media screen and (min-width: #{ config( grid, breakpoints, lg ) } ) {
 		font-size: calc-rem( 160px );
+		line-height: .875;
 	}
 }
 

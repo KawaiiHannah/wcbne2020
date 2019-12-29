@@ -512,7 +512,8 @@ html {
 @media screen and (min-width: 992px) {
   .entry-title,
   .home-hero h1 {
-    font-size: 10rem; } }
+    font-size: 10rem;
+    line-height: .875; } }
 
 .home .entry-header {
   display: none; }
