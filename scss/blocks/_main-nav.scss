@@ -6,7 +6,7 @@
 		padding: calc-rem( config( spacing, base ) / 2 ) calc-rem( config( grid, page-gutter ) );
 
 		@media screen and ( min-width: #{ config( grid, breakpoints, lg ) } ) {
-			padding: calc-rem( config( spacing, base ) );
+			padding: calc-rem( config( spacing, base ) ) calc-rem( config( spacing, base ) * 2 );
 		}
 	}
 
@@ -54,12 +54,25 @@
 
 	.menu {
 
+		li:hover > .sub-menu {
+			@media screen and ( min-width: #{ config( grid, breakpoints, lg ) } ) {
+				visibility: visible;
+				opacity: 1;
+			}
+		}
+
 		.sub-menu {
 			position: static;
 			float: none;
 			max-height: 0;
 			transition: max-height .2s ease;
 			overflow: hidden;
+
+			@media screen and ( min-width: #{ config( grid, breakpoints, lg ) } ) {
+				visibility: hidden;
+				opacity: 0;
+				transition: opacity .2s ease;
+			}
 
 			@media screen and ( max-width: #{ config( grid, breakpoints, lg ) - 1 } ) {
 				box-shadow: none;
@@ -68,10 +81,13 @@
 					padding-left: calc-rem( config( spacing, base ) * 1.5 );
 				}
 			}
+
 		}
 
-		.dropdown-toggle[aria-expanded="true"] + .sub-menu {
-			max-height: 100rem;
+		@media screen and ( max-width: #{ config( grid, breakpoints, lg ) - 1 } ) {
+			.dropdown-toggle[aria-expanded="true"] + .sub-menu {
+				max-height: 100rem;
+			}
 		}
 
 		@media screen and ( min-width: #{ config( grid, breakpoints, lg ) } ) {
