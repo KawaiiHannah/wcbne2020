@@ -485,7 +485,7 @@ html {
   .entry-header:before,
   .home-hero:before {
     padding-bottom: 73.3125%;
-    background-image: url("https://2020.brisbane.wordcamp.org/files/2019/12/image-mask-top.png");
+    background-image: url("https://2020.brisbane.wordcamp.org/files/2019/12/image-mask-top.png") !important;
     background-position: top center;
     top: 0; }
   .entry-header:after,
@@ -498,8 +498,12 @@ html {
 .home-hero .wp-block-cover__inner-container {
   color: #1f1f1f; }
 
+.site-main {
+  margin-top: -20%; }
+
 .home-hero:before {
-  display: none !important; }
+  background-color: transparent !important;
+  opacity: 1 !important; }
 
 .entry-title {
   position: relative;
