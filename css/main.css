@@ -420,7 +420,7 @@ p {
  *
  *	Elements: Headings                     
  */
-.custom-header, .home-hero .wp-block-cover__inner-container, .entry-title, .main-navigation,
+.entry-content > *, .custom-header, .home-hero .wp-block-cover__inner-container, .entry-title, .main-navigation,
 .container {
   max-width: 1170px;
   padding-left: 20px;

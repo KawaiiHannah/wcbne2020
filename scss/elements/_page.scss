@@ -55,6 +55,10 @@ p {
 	margin-bottom: calc-rem( config( spacing, base ) );
 }
 
+.entry-content > * {
+	@extend %container;
+}
+
 .has-medium-font-size {
 	@extend %text-style--lede;
 }
