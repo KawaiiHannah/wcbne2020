@@ -38,6 +38,12 @@
 
 .home-hero .wp-block-cover__inner-container {
 	@extend %container;
+	color: config( colors, page, contrast );
+}
+
+
+.honme-hero:before {
+	display: none;
 }
 
 

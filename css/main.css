@@ -495,6 +495,12 @@ html {
     background-position: bottom center;
     bottom: 0; }
 
+.home-hero .wp-block-cover__inner-container {
+  color: #1f1f1f; }
+
+.honme-hero:before {
+  display: none; }
+
 .entry-title {
   position: relative;
   z-index: 5; }
