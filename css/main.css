@@ -442,7 +442,7 @@ p {
  *
  *	Elements: Headings                     
  */
-.entry-content > *, .custom-header, .home-hero .wp-block-cover__inner-container, .entry-title, .main-navigation, #secondary-sidebar,
+.entry-content > *, .custom-header, .home-hero .wp-block-cover__inner-container, .entry-title, .site-header .main-navigation, #secondary-sidebar,
 .site-info,
 .container {
   max-width: 1170px;
@@ -608,25 +608,25 @@ p {
   padding-left: 0;
   padding-right: 0; }
 
-.main-navigation {
+.site-header .main-navigation {
   font-weight: 600; }
-  .main-navigation a {
+  .site-header .main-navigation a {
     color: inherit !important;
     padding: 0.75rem 1.25rem; }
     @media screen and (min-width: 992px) {
-      .main-navigation a {
+      .site-header .main-navigation a {
         padding: 1.5rem 3rem;
         background-color: rgba(246, 249, 250, 0.75); } }
   @media screen and (min-width: 992px) {
-    .main-navigation .menu > li > a {
+    .site-header .main-navigation .menu > li > a {
       padding: 1.5rem 3rem; } }
-  .main-navigation li:hover > a {
+  .site-header .main-navigation li:hover > a {
     color: #8953ac !important; }
-  .main-navigation li {
+  .site-header .main-navigation li {
     text-align: left; }
 
 @media screen and (min-width: 992px) {
-  .main-navigation {
+  .site-header .main-navigation {
     position: absolute;
     top: 0;
     left: 50%;
@@ -634,7 +634,7 @@ p {
     text-align: right; } }
 
 @media screen and (max-width: 991px) {
-  .main-navigation .menu-primary-container {
+  .site-header .main-navigation .menu-primary-container {
     position: absolute;
     top: 0;
     left: 0;
@@ -646,59 +646,59 @@ p {
     padding-top: 5.3125rem; } }
 
 @media screen and (min-width: 992px) {
-  .main-navigation .menu li:hover > .sub-menu {
+  .site-header .main-navigation .menu li:hover > .sub-menu {
     visibility: visible;
     opacity: 1; } }
 
-.main-navigation .menu .sub-menu {
+.site-header .main-navigation .menu .sub-menu {
   position: static;
   float: none;
   max-height: 0;
   transition: max-height .2s ease;
   overflow: hidden; }
   @media screen and (min-width: 992px) {
-    .main-navigation .menu .sub-menu {
+    .site-header .main-navigation .menu .sub-menu {
       visibility: hidden;
       opacity: 0;
       transition: opacity .2s ease; } }
   @media screen and (max-width: 991px) {
-    .main-navigation .menu .sub-menu {
+    .site-header .main-navigation .menu .sub-menu {
       box-shadow: none; }
-      .main-navigation .menu .sub-menu a {
+      .site-header .main-navigation .menu .sub-menu a {
         padding-left: 2.25rem; } }
 
 @media screen and (max-width: 991px) {
-  .main-navigation .menu .dropdown-toggle[aria-expanded="true"] + .sub-menu {
+  .site-header .main-navigation .menu .dropdown-toggle[aria-expanded="true"] + .sub-menu {
     max-height: 100rem; } }
 
 @media screen and (min-width: 992px) {
-  .main-navigation .menu li {
+  .site-header .main-navigation .menu li {
     display: inline-block;
     position: relative; }
-  .main-navigation .menu .sub-menu {
+  .site-header .main-navigation .menu .sub-menu {
     top: 100%;
     left: 0;
     position: absolute;
     max-height: none; }
-    .main-navigation .menu .sub-menu .sub-menu {
+    .site-header .main-navigation .menu .sub-menu .sub-menu {
       top: 0;
       left: 100%; }
-  .main-navigation .menu > li {
+  .site-header .main-navigation .menu > li {
     margin-right: -4px; } }
 
 @media screen and (max-width: 991px) {
-  .menu-primary-container {
+  .site-header .menu-primary-container {
     max-height: 0;
     overflow: hidden;
     opacity: 0;
     transition: opacity .2s ease; }
-  .menu-toggle[aria-expanded="true"] + .menu-primary-container {
+  .site-header .menu-toggle[aria-expanded="true"] + .menu-primary-container {
     max-height: 100vh;
     opacity: 1;
     overflow: auto; } }
 
-.menu-toggle,
-.dropdown-toggle {
+.site-header .menu-toggle,
+.site-header .dropdown-toggle {
   border: none;
   outline: none;
   background-color: rgba(246, 249, 250, 0.75) !important;
@@ -708,10 +708,10 @@ p {
   top: 0;
   right: 0; }
 
-.dropdown-toggle {
+.site-header .dropdown-toggle {
   width: 3rem;
   height: 3rem; }
-  .dropdown-toggle:before {
+  .site-header .dropdown-toggle:before {
     content: "";
     display: inline-block;
     width: .75rem;
@@ -722,12 +722,12 @@ p {
     border-right: 2px solid currentcolor;
     transform: rotate(45deg); }
 
-.menu-toggle {
+.site-header .menu-toggle {
   text-indent: -999px;
   overflow: hidden;
   text-align: center;
   z-index: 10; }
-  .menu-toggle:after {
+  .site-header .menu-toggle:after {
     content: "";
     background-image: url("https://2020.brisbane.wordcamp.org/files/2019/12/hamburger-icon.png");
     width: 2.5rem;
@@ -742,10 +742,10 @@ p {
     position: absolute;
     display: inline-block; }
   @media screen and (max-width: 991px) {
-    .menu-toggle {
+    .site-header .menu-toggle {
       display: block !important; } }
 
-.page-navigation-container li {
+.site-header .page-navigation-container li {
   float: none; }
 
 .widget-area[role="complementary"],
@@ -766,6 +766,7 @@ p {
   .widget-area[role="complementary"] .widget {
     display: inline-block;
     vertical-align: top;
+    width: 100%;
     margin-right: -4px; }
     @media screen and (min-width: 768px) {
       .widget-area[role="complementary"] .widget {
