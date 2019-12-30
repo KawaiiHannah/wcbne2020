@@ -18,16 +18,32 @@
 
 	.widget {
 		display: inline-block;
-		padding-right: calc-rem( config( spacing, base ) );
 		vertical-align: top;
 		margin-right: -4px;
 
 		@media screen and ( min-width: #{ config( grid, breakpoints, md ) } ) {
+			padding-right: calc-rem( config( spacing, base ) * 2 );
 			width: 50%;
 		}
 
 		@media screen and ( min-width: #{ config( grid, breakpoints, md ) } ) {
-			width: 33.333%;
+			width: 25%;
+		}
+	}
+
+	.widget_blog_subscription {
+		@media screen and ( min-width: #{ config( grid, breakpoints, md ) } ) {
+			width: 40%;
+		}
+
+		.post-date {
+			display: block;
+		}
+	}
+
+	.widget_recent_entries {
+		@media screen and ( min-width: #{ config( grid, breakpoints, md ) } ) {
+			width: 35%;
 		}
 	}
 }

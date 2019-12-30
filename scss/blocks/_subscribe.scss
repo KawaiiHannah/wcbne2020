@@ -7,12 +7,24 @@
 	margin-bottom: 0;
 }
 
+#subscribe-email {
+	input {
+		width: 100%;
+		height: calc-rem( 58px );
+		padding-right: 10em;
+		border-radius: 2rem;
+		padding-left: 2rem;
+	}
+}
+
 #subscribe-submit {
 	position: absolute;
 	bottom: 0;
-	right: 0;
+	right: calc-rem( config( spacing, base ) );
 
 	button {
 		@extend %btn;
+		border-top-left-radius: 0;
+		border-bottom-left-radius: 0;
 	}
 }

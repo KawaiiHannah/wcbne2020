@@ -1,8 +1,14 @@
 %btn,
 .wp-block-button__link,
 .btn {
+	border-radius: 2rem;
+	border: 2px solid config( colors, primary, base );
 	background-color: config( colors, primary, base );
 	color: config( colors, primary, contrast );
 	font-weight: config( typography, primary, weights, bold );
 	padding: calc-rem( config( spacing, base ) * .75 ) calc-rem( config( spacing, base ) );
+
+	&:hover {
+		background-color: config( colors, primary, alt );
+	}
 }
