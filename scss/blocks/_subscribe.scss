@@ -20,7 +20,11 @@
 #subscribe-submit {
 	position: absolute;
 	bottom: 0;
-	right: calc-rem( config( spacing, base ) );
+	right: 0;
+
+	@media screen and ( min-width: #{ config( grid, breakpoints, md ) } ) {
+		right: calc-rem( config( spacing, base ) * 2 );
+	}
 
 	button {
 		@extend %btn;
