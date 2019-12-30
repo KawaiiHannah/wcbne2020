@@ -399,9 +399,11 @@ h3,
 
 h4,
 .h4, .widget-title {
+  font-family: Raleway;
   font-weight: 600;
   font-size: 1rem;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  margin-bottom: .5rem; }
 
 html {
   font-weight: 300;
@@ -448,6 +450,7 @@ p {
   padding-right: 20px;
   margin-left: auto;
   margin-right: auto; }
+
 
 .wp-block-button__link,
 .btn {
@@ -768,6 +771,18 @@ p {
 .site-footer {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem; }
+
+.widget_blog_subscription {
+  position: relative; }
+
+#subscribe-email,
+#subscribe-submit {
+  margin-bottom: 0; }
+
+#subscribe-submit {
+  position: absolute;
+  bottom: 0;
+  right: 0; }
 
 .entry-header,
 .home-hero {

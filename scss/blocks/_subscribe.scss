@@ -1,0 +1,18 @@
+.widget_blog_subscription {
+	position: relative;
+}
+
+#subscribe-email,
+#subscribe-submit {
+	margin-bottom: 0;
+}
+
+#subscribe-submit {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+
+	button {
+		@extend %btn;
+	}
+}

@@ -39,9 +39,11 @@
 }
 
 %text-style--h4 {
+	font-family: config( typography, primary, face );
 	font-weight: config( typography, primary, weights, bold );
 	font-size: calc-rem( config( typography, primary, sizes, base ) );
 	text-transform: uppercase;
+	margin-bottom: .5rem;
 }
 
 html {
