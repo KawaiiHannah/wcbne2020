@@ -86,3 +86,8 @@ p {
 .has-medium-font-size {
 	@extend %text-style--lede;
 }
+
+strong,
+b {
+	font-weight: config( typography, primary, weights, bold );
+}
