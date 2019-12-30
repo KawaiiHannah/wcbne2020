@@ -1,0 +1,20 @@
+.wp-block-media-text__content {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.wp-block-media-text__media {
+	padding: calc-rem( config( spacing, base ) * 2 );
+
+	img {
+
+	    border-radius:  50%;
+	    padding: 1.5rem;
+	    border:  2px dashed config( colors, primary, base );
+
+	}
+
+	.media--round & {
+		border-radius: 50%;
+	}
+}
