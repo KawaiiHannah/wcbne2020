@@ -1,196 +1,200 @@
-.main-navigation {
-	font-weight: config( typography, primary, weights, bold );
+.site-header {
 
-	a {
-		color: inherit !important;
-		padding: calc-rem( config( spacing, base ) / 2 ) calc-rem( config( grid, page-gutter ) );
+	.main-navigation {
+		font-weight: config( typography, primary, weights, bold );
+
+		a {
+			color: inherit !important;
+			padding: calc-rem( config( spacing, base ) / 2 ) calc-rem( config( grid, page-gutter ) );
+
+			@media screen and ( min-width: #{ config( grid, breakpoints, lg ) } ) {
+				padding: calc-rem( config( spacing, base ) ) calc-rem( config( spacing, base ) * 2 );
+				background-color: rgba( config( colors, page, base ), .75 );
+			}
+		}
+
+		.menu > li > a {
+			@media screen and ( min-width: #{ config( grid, breakpoints, lg ) } ) {
+				padding: calc-rem( config( spacing, base ) ) calc-rem( config( spacing, base ) * 2 );
+			}
+		}
+
+		li:hover > a {
+		 	color: config( colors, primary, base ) !important;
+		}
+
+		li {
+			text-align: left;
+		}
+
+	}
+
+
+	.main-navigation {
+		@extend %container;
 
 		@media screen and ( min-width: #{ config( grid, breakpoints, lg ) } ) {
-			padding: calc-rem( config( spacing, base ) ) calc-rem( config( spacing, base ) * 2 );
-			background-color: rgba( config( colors, page, base ), .75 );
-		}
-	}
-
-	.menu > li > a {
-		@media screen and ( min-width: #{ config( grid, breakpoints, lg ) } ) {
-			padding: calc-rem( config( spacing, base ) ) calc-rem( config( spacing, base ) * 2 );
-		}
-	}
-
-	li:hover > a {
-	 	color: config( colors, primary, base ) !important;
-	}
-
-	li {
-		text-align: left;
-	}
-
-}
-
-
-.main-navigation {
-	@extend %container;
-
-	@media screen and ( min-width: #{ config( grid, breakpoints, lg ) } ) {
-		position: absolute;
-		top: 0;
-		left: 50%;
-		transform: translateX( -50% );
-		text-align: right;
-	}
-
-	.menu-primary-container {
-		@media screen and ( max-width: #{ config( grid, breakpoints, lg ) - 1 } ) {
 			position: absolute;
 			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100vh;
-			background-color: rgba( config( colors, page, base ), .9 );
-			padding-left: 0;
-			padding-right: 0;
-			padding-top: calc-rem( 85px );
-		}
-	}
-
-	.menu {
-
-		li:hover > .sub-menu {
-			@media screen and ( min-width: #{ config( grid, breakpoints, lg ) } ) {
-				visibility: visible;
-				opacity: 1;
-			}
+			left: 50%;
+			transform: translateX( -50% );
+			text-align: right;
 		}
 
-		.sub-menu {
-			position: static;
-			float: none;
-			max-height: 0;
-			transition: max-height .2s ease;
-			overflow: hidden;
-
-			@media screen and ( min-width: #{ config( grid, breakpoints, lg ) } ) {
-				visibility: hidden;
-				opacity: 0;
-				transition: opacity .2s ease;
-			}
-
+		.menu-primary-container {
 			@media screen and ( max-width: #{ config( grid, breakpoints, lg ) - 1 } ) {
-				box-shadow: none;
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100vh;
+				background-color: rgba( config( colors, page, base ), .9 );
+				padding-left: 0;
+				padding-right: 0;
+				padding-top: calc-rem( 85px );
+			}
+		}
 
-				a {
-					padding-left: calc-rem( config( spacing, base ) * 1.5 );
+		.menu {
+
+			li:hover > .sub-menu {
+				@media screen and ( min-width: #{ config( grid, breakpoints, lg ) } ) {
+					visibility: visible;
+					opacity: 1;
 				}
-			}
-
-		}
-
-		@media screen and ( max-width: #{ config( grid, breakpoints, lg ) - 1 } ) {
-			.dropdown-toggle[aria-expanded="true"] + .sub-menu {
-				max-height: 100rem;
-			}
-		}
-
-		@media screen and ( min-width: #{ config( grid, breakpoints, lg ) } ) {
-			li {
-				display: inline-block;
-				position: relative;
 			}
 
 			.sub-menu {
-				top: 100%;
-				left: 0;
-				position: absolute;
-				max-height: none;
+				position: static;
+				float: none;
+				max-height: 0;
+				transition: max-height .2s ease;
+				overflow: hidden;
 
-				.sub-menu {
-					top: 0;
-					left: 100%;
+				@media screen and ( min-width: #{ config( grid, breakpoints, lg ) } ) {
+					visibility: hidden;
+					opacity: 0;
+					transition: opacity .2s ease;
+				}
+
+				@media screen and ( max-width: #{ config( grid, breakpoints, lg ) - 1 } ) {
+					box-shadow: none;
+
+					a {
+						padding-left: calc-rem( config( spacing, base ) * 1.5 );
+					}
+				}
+
+			}
+
+			@media screen and ( max-width: #{ config( grid, breakpoints, lg ) - 1 } ) {
+				.dropdown-toggle[aria-expanded="true"] + .sub-menu {
+					max-height: 100rem;
 				}
 			}
 
-			> li {
-				margin-right: -4px;
+			@media screen and ( min-width: #{ config( grid, breakpoints, lg ) } ) {
+				li {
+					display: inline-block;
+					position: relative;
+				}
+
+				.sub-menu {
+					top: 100%;
+					left: 0;
+					position: absolute;
+					max-height: none;
+
+					.sub-menu {
+						top: 0;
+						left: 100%;
+					}
+				}
+
+				> li {
+					margin-right: -4px;
+				}
 			}
 		}
 	}
-}
-
-@media screen and ( max-width: #{ config( grid, breakpoints, lg ) - 1 } ) {
-	.menu-primary-container {
-		max-height: 0;
-		overflow: hidden;
-		opacity: 0;
-		transition: opacity .2s ease;
-	}
-
-	.menu-toggle[aria-expanded="true"] + .menu-primary-container {
-		max-height: 100vh;
-		opacity: 1;
-		overflow: auto;
-	}
-} 
-
-
-.menu-toggle,
-.dropdown-toggle {
-	border: none;
-	outline: none;
-	background-color: rgba( config( colors, page, base ), .75 ) !important;
-	height: calc-rem( 85px );
-	width: calc-rem( 85px );
-	position: absolute;
-	top: 0;
-	right: 0;
-}
-
-
-.dropdown-toggle {
-	width: calc-rem( 48px );
-	height: calc-rem( 48px );
-
-	&:before {
-		content: "";
-		display: inline-block; 
-		width: .75rem;
-		height: .75rem;
-		position: relative;
-		top: -.3em;
-		border-bottom: 2px solid currentcolor;
-		border-right: 2px solid currentcolor;
-		transform: rotate( 45deg );
-	}
-}
-
-
-.menu-toggle {
-	text-indent: -999px;
-	overflow: hidden;
-	text-align: center;
-	z-index: 10;
-
-	&:after {
-		content: "";
-		background-image: url('https://2020.brisbane.wordcamp.org/files/2019/12/hamburger-icon.png');
-		width: calc-rem( 40px );
-		height: calc-rem( 40px );
-		right: calc-rem( ( 85px - 40px ) / 2 );
-		top: calc-rem( ( 85px - 40px ) / 2 );
-		margin-top: calc-rem( config( spacing, base ) * .25 );
-		background-size: contain;
-		background-position: center;
-		background-repeat: no-repeat;
-		text-indent: 0;
-		position: absolute;
-		display: inline-block;
-	}
 
 	@media screen and ( max-width: #{ config( grid, breakpoints, lg ) - 1 } ) {
-		display: block !important;
+		.menu-primary-container {
+			max-height: 0;
+			overflow: hidden;
+			opacity: 0;
+			transition: opacity .2s ease;
+		}
+
+		.menu-toggle[aria-expanded="true"] + .menu-primary-container {
+			max-height: 100vh;
+			opacity: 1;
+			overflow: auto;
+		}
+	} 
+
+
+	.menu-toggle,
+	.dropdown-toggle {
+		border: none;
+		outline: none;
+		background-color: rgba( config( colors, page, base ), .75 ) !important;
+		height: calc-rem( 85px );
+		width: calc-rem( 85px );
+		position: absolute;
+		top: 0;
+		right: 0;
 	}
-}
 
 
-.page-navigation-container li {
-	float: none;
+	.dropdown-toggle {
+		width: calc-rem( 48px );
+		height: calc-rem( 48px );
+
+		&:before {
+			content: "";
+			display: inline-block; 
+			width: .75rem;
+			height: .75rem;
+			position: relative;
+			top: -.3em;
+			border-bottom: 2px solid currentcolor;
+			border-right: 2px solid currentcolor;
+			transform: rotate( 45deg );
+		}
+	}
+
+
+	.menu-toggle {
+		text-indent: -999px;
+		overflow: hidden;
+		text-align: center;
+		z-index: 10;
+
+		&:after {
+			content: "";
+			background-image: url('https://2020.brisbane.wordcamp.org/files/2019/12/hamburger-icon.png');
+			width: calc-rem( 40px );
+			height: calc-rem( 40px );
+			right: calc-rem( ( 85px - 40px ) / 2 );
+			top: calc-rem( ( 85px - 40px ) / 2 );
+			margin-top: calc-rem( config( spacing, base ) * .25 );
+			background-size: contain;
+			background-position: center;
+			background-repeat: no-repeat;
+			text-indent: 0;
+			position: absolute;
+			display: inline-block;
+		}
+
+		@media screen and ( max-width: #{ config( grid, breakpoints, lg ) - 1 } ) {
+			display: block !important;
+		}
+	}
+
+
+	.page-navigation-container li {
+		float: none;
+	}
+
 }
