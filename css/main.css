@@ -398,7 +398,7 @@ h3,
   font-size: 1.875rem; }
 
 h4,
-.h4 {
+.h4, .widget-title {
   font-weight: 600;
   font-size: 1rem;
   text-transform: uppercase; }
@@ -753,7 +753,8 @@ p {
   .widget-area[role="complementary"] .widget {
     display: inline-block;
     padding-right: 1.5rem;
-    vertical-align: top; }
+    vertical-align: top;
+    margin-right: -4px; }
     @media screen and (min-width: 768px) {
       .widget-area[role="complementary"] .widget {
         width: 50%; } }
