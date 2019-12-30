@@ -440,7 +440,8 @@ p {
  *
  *	Elements: Headings                     
  */
-.entry-content > *, .custom-header, .home-hero .wp-block-cover__inner-container, .entry-title, .main-navigation,
+.entry-content > *, .custom-header, .home-hero .wp-block-cover__inner-container, .entry-title, .main-navigation, #secondary-sidebar,
+.site-info,
 .container {
   max-width: 1170px;
   padding-left: 20px;
@@ -567,7 +568,7 @@ p {
   display: block;
   font-weight: 600;
   content: "WordCamp Brisbane 2020";
-  margin-top: 1rem; }
+  margin-top: 2rem; }
 
 .entry-title,
 .home-hero h1 {
@@ -605,7 +606,8 @@ p {
     padding: 0.75rem 1.25rem; }
     @media screen and (min-width: 992px) {
       .main-navigation a {
-        padding: 1.5rem 3rem; } }
+        padding: 1.5rem 3rem;
+        background-color: rgba(246, 249, 250, 0.75); } }
   @media screen and (min-width: 992px) {
     .main-navigation .menu > li > a {
       padding: 1.5rem 3rem; } }
@@ -673,9 +675,7 @@ p {
       top: 0;
       left: 100%; }
   .main-navigation .menu > li {
-    margin-right: -4px; }
-    .main-navigation .menu > li > a {
-      background-color: rgba(246, 249, 250, 0.75); } }
+    margin-right: -4px; } }
 
 @media screen and (max-width: 991px) {
   .menu-primary-container {
@@ -738,6 +738,35 @@ p {
 
 .page-navigation-container li {
   float: none; }
+
+.widget-area[role="complementary"],
+.site-footer {
+  background-color: #1f1f1f;
+  color: #f8f8f8; }
+  .widget-area[role="complementary"] a,
+  .site-footer a {
+    color: inherit; }
+
+.widget-area[role="complementary"] {
+  padding-top: 3rem;
+  padding-bottom: 3rem; }
+  .widget-area[role="complementary"] .widget {
+    display: inline-block;
+    padding-right: 1.5rem;
+    vertical-align: top; }
+    @media screen and (min-width: 768px) {
+      .widget-area[role="complementary"] .widget {
+        width: 50%; } }
+    @media screen and (min-width: 768px) {
+      .widget-area[role="complementary"] .widget {
+        width: 33.333%; } }
+
+.site-info {
+  text-align: center; }
+
+.site-footer {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem; }
 
 .entry-header,
 .home-hero {

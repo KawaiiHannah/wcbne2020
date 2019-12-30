@@ -1,0 +1,42 @@
+.widget-area[role="complementary"],
+.site-footer {
+	background-color: config( colors, dark, base );
+	color: config( colors, dark, contrast );
+
+	a {
+		color: inherit;
+	}
+}
+
+.widget-area[role="complementary"] {
+	padding-top: calc-rem( config( spacing, base ) * 2 );
+	padding-bottom: calc-rem( config( spacing, base ) * 2 );
+
+	.widget {
+		display: inline-block;
+		padding-right: calc-rem( config( spacing, base ) );
+		vertical-align: top;
+
+		@media screen and ( min-width: #{ config( grid, breakpoints, md ) } ) {
+			width: 50%;
+		}
+
+		@media screen and ( min-width: #{ config( grid, breakpoints, md ) } ) {
+			width: 33.333%;
+		}
+	}
+}
+
+#secondary-sidebar,
+.site-info {
+	@extend %container;
+}
+
+.site-info {
+	text-align: center;
+}
+
+.site-footer {
+	padding-top: calc-rem( config( spacing, base ) );
+	padding-bottom: calc-rem( config( spacing, base ) );
+}
