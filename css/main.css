@@ -865,7 +865,7 @@ a {
 .callout {
   background-color: #f2efed;
   color: #1f1f1f; }
-  .callout .wp-block-cover .wp-block-cover__inner-container {
+  .callout.wp-block-cover .wp-block-cover__inner-container {
     color: inherit; }
 
 .entry-header,

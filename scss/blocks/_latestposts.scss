@@ -1,3 +1,22 @@
 .wp-block-latest-posts {
 	
+	li {
+		padding-top: calc-rem( config( spacing, base ) * 2 );
+		padding-bottom: calc-rem( config( spacing, base ) * 2 );
+		border-bottom: 1px solid rgba( #000, .1 );
+	}
+
+	li:first-of-type {
+		border-top: 1px solid rgba( #000, .1 );
+	}
+
+	li > a {
+		font-size: config( typography, primary, sizes, large );
+		text-decoration: none;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
 }
