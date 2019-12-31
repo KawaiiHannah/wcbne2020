@@ -38,6 +38,12 @@
 	margin-bottom: 0;
 }
 
+.comments-area {
+	.comment-list {
+		@extend %container;
+	}
+}
+
 .post-navigation {
 
 	.nav-links {

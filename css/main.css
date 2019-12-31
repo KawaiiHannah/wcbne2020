@@ -465,7 +465,7 @@ th {
 
 .entry-content > *, .custom-header, .home-hero .wp-block-cover__inner-container, .entry-title, .site-header .main-navigation, #secondary-sidebar,
 .site-info, .paper-texture .wp-block-group__inner-container,
-.post-navigation .wp-block-group__inner-container, .entry-meta, .post-navigation .nav-links,
+.comments-area .wp-block-group__inner-container, .entry-meta, .comments-area .comment-list, .post-navigation .nav-links,
 .container {
   max-width: 1170px;
   padding-left: 20px;
@@ -903,7 +903,7 @@ input[type="submit"] {
     text-decoration: underline; }
 
 .paper-texture,
-.post-navigation {
+.comments-area {
   background-color: #efeef0;
   background-image: url("https://2020.brisbane.wordcamp.org/files/2019/12/paper-texture.jpg");
   background-repeat: repeat-y;
