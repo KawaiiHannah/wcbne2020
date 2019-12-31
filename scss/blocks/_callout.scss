@@ -3,6 +3,7 @@
 	color: config( colors, page, contrast );
 	position: relative;
 	z-index: 6;
+	box-shadow: 0rem 0rem 4rem rgba( 0, 0, 0, .1 );
 
 	&.wp-block-cover .wp-block-cover__inner-container {
 		color: inherit;

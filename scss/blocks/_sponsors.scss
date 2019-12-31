@@ -1,0 +1,29 @@
+.wordcamp-sponsors.sponsor-grid {
+	text-align: center;
+	display: block !important;
+	
+	li {
+		display: inline-block;
+		vertical-align: middle;
+		margin-right: -4px;
+		width: 50%;
+		padding: calc-rem( config( spacing, base ) );
+
+		@media screen and ( min-width: #{ config( grid, breakpoints, sm ) } ) {
+			width: 33.333%;
+		}
+
+		@media screen and ( min-width: #{ config( grid, breakpoints, lg ) } ) {
+			width: 20%;
+		}
+	}
+	
+	img {
+		filter: grayscale( 100% );
+		transition: all .2s ease;
+
+		&:hover {
+			filter: grayscale( 0% );
+		}
+	}
+}

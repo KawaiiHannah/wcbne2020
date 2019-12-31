@@ -452,7 +452,7 @@ a {
  *	Elements: Headings                     
  */
 .entry-content > *, .custom-header, .home-hero .wp-block-cover__inner-container, .entry-title, .site-header .main-navigation, #secondary-sidebar,
-.site-info,
+.site-info, .paper-texture .wp-block-group__inner-container,
 .container {
   max-width: 1170px;
   padding-left: 20px;
@@ -866,7 +866,8 @@ a {
   background-color: #f2efed;
   color: #1f1f1f;
   position: relative;
-  z-index: 6; }
+  z-index: 6;
+  box-shadow: 0rem 0rem 4rem rgba(0, 0, 0, 0.1); }
   .callout.wp-block-cover .wp-block-cover__inner-container {
     color: inherit; }
 
@@ -898,6 +899,27 @@ a {
 .callout + .paper-texture {
   margin-top: -9rem;
   padding-top: 12rem; }
+
+.wordcamp-sponsors.sponsor-grid {
+  text-align: center;
+  display: block !important; }
+  .wordcamp-sponsors.sponsor-grid li {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: -4px;
+    width: 50%;
+    padding: 1.5rem; }
+    @media screen and (min-width: 540px) {
+      .wordcamp-sponsors.sponsor-grid li {
+        width: 33.333%; } }
+    @media screen and (min-width: 992px) {
+      .wordcamp-sponsors.sponsor-grid li {
+        width: 20%; } }
+  .wordcamp-sponsors.sponsor-grid img {
+    filter: grayscale(100%);
+    transition: all .2s ease; }
+    .wordcamp-sponsors.sponsor-grid img:hover {
+      filter: grayscale(0%); }
 
 .entry-header,
 .home-hero {
