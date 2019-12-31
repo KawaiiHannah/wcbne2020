@@ -378,13 +378,13 @@ html, .entry-title:after {
 .has-medium-font-size {
   font-size: 1.5rem; }
 
-h1,
+h1, .single .entry-title,
 .h1, h2,
 .h2 {
   font-family: "Playfair Display";
   font-weight: 900; }
 
-h1,
+h1, .single .entry-title,
 .h1 {
   font-size: 5.625rem; }
 
@@ -451,8 +451,21 @@ a {
  *
  *	Elements: Headings                     
  */
+tr {
+  border-top: 1px solid rgba(0, 0, 0, 0.1); }
+
+td,
+th {
+  padding: 1rem; }
+
+th {
+  font-weight: 600;
+  text-align: left;
+  color: #8953ac; }
+
 .entry-content > *, .custom-header, .home-hero .wp-block-cover__inner-container, .entry-title, .site-header .main-navigation, #secondary-sidebar,
 .site-info, .paper-texture .wp-block-group__inner-container,
+.post-navigation .wp-block-group__inner-container, .entry-meta, .post-navigation .nav-links,
 .container {
   max-width: 1170px;
   padding-left: 20px;
@@ -462,8 +475,10 @@ a {
 
 #subscribe-submit button,
 .wp-block-button__link,
-.btn {
+.btn,
+input[type="submit"] {
   border-radius: 2rem;
+  font-size: 16px;
   border: 2px solid #8953ac;
   background-color: #8953ac;
   color: #f8f8f8;
@@ -471,8 +486,10 @@ a {
   padding: 1.125rem 1.5rem; }
   #subscribe-submit button:hover,
   .wp-block-button__link:hover,
-  .btn:hover {
-    background-color: #8c46a3; }
+  .btn:hover,
+  input[type="submit"]:hover {
+    background-color: #8c46a3;
+    border-color: #8c46a3; }
 
 /**
  * 	 __        ______ ____  _   _ _____ 
@@ -885,7 +902,8 @@ a {
   .wp-block-latest-posts li > a:hover {
     text-decoration: underline; }
 
-.paper-texture {
+.paper-texture,
+.post-navigation {
   background-color: #efeef0;
   background-image: url("https://2020.brisbane.wordcamp.org/files/2019/12/paper-texture.jpg");
   background-repeat: repeat-y;
@@ -920,6 +938,36 @@ a {
     transition: all .2s ease; }
     .wordcamp-sponsors.sponsor-grid img:hover {
       filter: grayscale(0%); }
+
+.entry-meta {
+  position: relative;
+  z-index: 5;
+  margin-top: 0;
+  font-weight: 600; }
+
+.nav-previous,
+.nav-next {
+  font-weight: 600; }
+  .nav-previous:before,
+  .nav-next:before {
+    display: block;
+    font-weight: 300; }
+
+.nav-previous:before {
+  content: "Previous"; }
+
+.nav-next {
+  text-align: right; }
+  .nav-next:before {
+    content: "Next"; }
+
+.site-main .post-navigation {
+  margin-bottom: 0; }
+
+.post-navigation a {
+  text-decoration: none; }
+  .post-navigation a:hover {
+    text-decoration: underline; }
 
 .entry-header,
 .home-hero {

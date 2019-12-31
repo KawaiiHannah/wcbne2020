@@ -1,0 +1,14 @@
+tr {
+	border-top: 1px solid rgba( #000, .1 );
+}
+
+td,
+th {
+	padding: 1rem;
+}
+
+th {
+	font-weight: config( typography, primary, weights, bold );
+	text-align: left;
+	color: config( colors, primary, base );
+}

@@ -1,7 +1,9 @@
 %btn,
 .wp-block-button__link,
-.btn {
+.btn,
+input[type="submit"] {
 	border-radius: 2rem;
+	font-size: config( typography, primary, sizes, base );
 	border: 2px solid config( colors, primary, base );
 	background-color: config( colors, primary, base );
 	color: config( colors, primary, contrast );
@@ -10,5 +12,6 @@
 
 	&:hover {
 		background-color: config( colors, primary, alt );
+		border-color: config( colors, primary, alt );
 	}
 }

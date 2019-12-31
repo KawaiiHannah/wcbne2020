@@ -1,0 +1,54 @@
+.single  .entry-title {
+	@extend %h1;
+}
+
+.entry-meta {
+	@extend %container;
+	position: relative;
+	z-index: 5;
+	margin-top: 0;
+	font-weight: config( typography, primary, weights, bold );
+}
+
+.nav-previous,
+.nav-next {
+	font-weight: config( typography, primary, weights, bold );
+
+	&:before {
+		display: block;
+		font-weight: config( typography, primary, weights, regular );
+	}
+}
+
+.nav-previous {
+	&:before {
+		content: "Previous";
+	}
+}
+
+.nav-next {
+	text-align: right;
+
+	&:before {
+		content: "Next";
+	}
+}
+
+.site-main .post-navigation {
+	margin-bottom: 0;
+}
+
+.post-navigation {
+
+	.nav-links {
+		@extend %container;
+	}
+
+	a {
+		text-decoration: none;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
