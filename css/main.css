@@ -437,6 +437,11 @@ strong,
 b {
   font-weight: 600; }
 
+a {
+  color: #8953ac; }
+  a:hover {
+    color: #8c46a3; }
+
 /**
  * 	 __        ______ ____  _   _ _____ 
  *   \ \      / / ___| __ )| \ | | ____|
@@ -860,6 +865,8 @@ b {
 .callout {
   background-color: #f2efed;
   color: #1f1f1f; }
+  .callout .wp-block-cover .wp-block-cover__inner-container {
+    color: inherit; }
 
 .entry-header,
 .home-hero {

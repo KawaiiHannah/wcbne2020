@@ -91,3 +91,11 @@ strong,
 b {
 	font-weight: config( typography, primary, weights, bold );
 }
+
+a {
+	color: config( colors, primary, base );
+
+	&:hover {
+		color: config( colors, primary, alt );
+	}
+}
