@@ -864,7 +864,9 @@ a {
 
 .callout {
   background-color: #f2efed;
-  color: #1f1f1f; }
+  color: #1f1f1f;
+  position: relative;
+  z-index: 6; }
   .callout.wp-block-cover .wp-block-cover__inner-container {
     color: inherit; }
 
@@ -889,6 +891,13 @@ a {
   background-size: 100% auto;
   padding-top: 3rem;
   padding-bottom: 3rem; }
+
+.hentry {
+  margin-bottom: 0; }
+
+.callout + .paper-texture {
+  margin-top: 3rem;
+  padding-top: 6rem; }
 
 .entry-header,
 .home-hero {

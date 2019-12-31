@@ -1,6 +1,8 @@
 .callout {
 	background-color: #f2efed;
 	color: config( colors, page, contrast );
+	position: relative;
+	z-index: 6;
 
 	&.wp-block-cover .wp-block-cover__inner-container {
 		color: inherit;
