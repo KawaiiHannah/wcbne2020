@@ -868,6 +868,28 @@ a {
   .callout.wp-block-cover .wp-block-cover__inner-container {
     color: inherit; }
 
+.wp-block-latest-posts li {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
+
+.wp-block-latest-posts li:first-of-type {
+  border-top: 1px solid rgba(0, 0, 0, 0.1); }
+
+.wp-block-latest-posts li > a {
+  font-size: 24px;
+  text-decoration: none; }
+  .wp-block-latest-posts li > a:hover {
+    text-decoration: underline; }
+
+.paper-texture {
+  background-color: #efeef0;
+  background-image: url("https://2020.brisbane.wordcamp.org/files/2019/12/paper-texture.jpg");
+  background-repeat: repeat-y;
+  background-size: 100% auto;
+  padding-top: 3rem;
+  padding-bottom: 3rem; }
+
 .entry-header,
 .home-hero {
   background-size: cover;
