@@ -39,7 +39,7 @@
 }
 
 .comments-area {
-	.comment-list {
+	> * {
 		@extend %container;
 	}
 }

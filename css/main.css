@@ -465,7 +465,7 @@ th {
 
 .entry-content > *, .custom-header, .home-hero .wp-block-cover__inner-container, .entry-title, .site-header .main-navigation, #secondary-sidebar,
 .site-info, .paper-texture .wp-block-group__inner-container,
-.comments-area .wp-block-group__inner-container, .entry-meta, .comments-area .comment-list, .post-navigation .nav-links,
+.comments-area .wp-block-group__inner-container, .entry-meta, .comments-area > *, .post-navigation .nav-links,
 .container {
   max-width: 1170px;
   padding-left: 20px;
