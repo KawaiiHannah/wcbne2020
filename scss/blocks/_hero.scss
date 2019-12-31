@@ -80,7 +80,8 @@
 }
 
 
-.entry-title {
+.entry-title,
+.entry-image {
 	@extend %container;
 	position: relative;
 	z-index: 5;
