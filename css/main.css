@@ -964,10 +964,17 @@ input[type="submit"] {
 .site-main .post-navigation {
   margin-bottom: 0; }
 
-.post-navigation a {
-  text-decoration: none; }
-  .post-navigation a:hover {
-    text-decoration: underline; }
+.comments-area {
+  position: relative;
+  z-index: 6; }
+
+.post-navigation {
+  position: relative;
+  z-index: 6; }
+  .post-navigation a {
+    text-decoration: none; }
+    .post-navigation a:hover {
+      text-decoration: underline; }
 
 .entry-header,
 .home-hero {

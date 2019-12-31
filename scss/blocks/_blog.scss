@@ -39,12 +39,17 @@
 }
 
 .comments-area {
+	position: relative;
+	z-index: 6;
+
 	> * {
 		@extend %container;
 	}
 }
 
 .post-navigation {
+	position: relative;
+	z-index: 6;
 
 	.nav-links {
 		@extend %container;
