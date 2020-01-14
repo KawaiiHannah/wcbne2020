@@ -19,6 +19,7 @@ h2,
 %h2,
 .h2 {
 	@extend %text-style--h2;
+	margin-bottom: calc-rem( config( spacing, base ) * .5 );
 }
 
 
@@ -26,6 +27,7 @@ h3,
 %h3,
 .h3 {
 	@extend %text-style--h3;
+	margin-bottom: calc-rem( config( spacing, base ) * .5 );
 }
 
 
@@ -33,4 +35,5 @@ h4,
 %h4,
 .h4 {
 	@extend %text-style--h4;
+	margin-bottom: calc-rem( config( spacing, base ) * .25 );
 }
