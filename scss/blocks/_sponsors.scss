@@ -1,21 +1,107 @@
-.wordcamp-sponsors.sponsor-grid {
-	text-align: center;
+.wordcamp-sponsors {
 	display: block !important;
+
+	li {
+		vertical-align: top !important;
+		margin-bottom: calc-rem( config( spacing, base ) );
+	}
+
+	li .wordcamp-sponsor {
+		padding: calc-rem( config( spacing, base ) );
+	}
+
+	.more-link {
+		display: block;
+		font-weight: config( typography, primary, weights, bold );
+		margin-top: calc-rem( config( spacing, base ) );
+		position: relative;
+		padding-right: calc-rem( config( spacing, base ) * 2 );
+		text-decoration: none;
+
+		&:before,
+		&:after {
+			display: inline-block;
+			content: "";
+			position: absolute;
+			right: 0;
+			top: 50%;
+		}
+
+		&:before {
+			width: calc-rem( config( spacing, base ) );
+			height: 2px;
+			background-color: currentColor;
+			margin-top: -1px;
+		}
+
+		&:after {
+			width: calc-rem( config( spacing, base ) / 3 );
+			height: calc-rem( config( spacing, base ) / 3 );
+			border-right: 2px solid currentColor;
+			border-top: 2px solid currentColor;
+			transform: rotate( 45deg );
+			margin-top: -0.27rem;
+		}
+	}
+
+	// Icon only grid
+	&.has-grid-columns-4 {
+		text-align: center;
+
+		li {
+
+			@media screen and ( min-width: #{ config( grid, breakpoints, sm ) } ) {
+				width: 33.333%;
+			}
+
+			@media screen and ( min-width: #{ config( grid, breakpoints, lg ) } ) {
+				width: 20%;
+			}
+		}
+	}
+
+	&.has-grid-columns-2,
+	&.has-grid-columns-3 {
+
+		li {
+			@media screen and ( min-width: #{ config( grid, breakpoints, md ) } ) {
+				width: 50%;
+			}
+		}
+
+		.wordcamp-sponsor {
+			padding: 0 calc-rem( config( spacing, base ) * 2 ) 0 0;
+		}
+
+		.wordcamp-sponsors__featured-image {
+			position: relative;
+			padding-bottom: 40%;
+			border-top: 1px solid darken( config( colors, page, alt ), 10 );
+		}
+
+		.wordcamp-image__featured-image-link {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate( -50%, -50% );
+			width: 100%;
+			max-width: 60%;
+		}
+	}
+
+	&.has-grid-columns-3 {
+		li {
+			@media screen and ( min-width: #{ config( grid, breakpoints, lg ) } ) {
+				width: 33.333%;
+			}
+		}
+	}
 	
 	li {
 		display: inline-block;
 		vertical-align: middle;
-		margin-right: -4px;
-		width: 50%;
-		padding: calc-rem( config( spacing, base ) );
-
-		@media screen and ( min-width: #{ config( grid, breakpoints, sm ) } ) {
-			width: 33.333%;
-		}
-
-		@media screen and ( min-width: #{ config( grid, breakpoints, lg ) } ) {
-			width: 20%;
-		}
+		margin-right: -4px !important;
+		width: 100%;
 	}
 	
 	img {
@@ -25,5 +111,17 @@
 		&:hover {
 			filter: grayscale( 0% );
 		}
+	}
+
+	.wordcamp-sponsors__featured-image {
+		position: relative;
+	}
+
+	.wordcamp-image__featured-image-link {
+		display: block;
+	}
+
+	.wordcamp-sponsors__content {
+		font-size: config( typography, primary, sizes, small );
 	}
 }

@@ -1,0 +1,12 @@
+%layout {
+	display: block;
+	margin-left: -( calc-rem( config( spacing, base ) ) );
+
+	> * {
+		display: inline-block;
+		vertical-align: top;
+		margin-right: -4px;
+		width: 100%;
+		padding-left: calc-rem( config( spacing, base ) );
+	}
+}

@@ -924,26 +924,81 @@ input[type="submit"] {
   margin-top: -9rem;
   padding-top: 12rem; }
 
-.wordcamp-sponsors.sponsor-grid {
-  text-align: center;
+.wordcamp-sponsors {
   display: block !important; }
-  .wordcamp-sponsors.sponsor-grid li {
-    display: inline-block;
-    vertical-align: middle;
-    margin-right: -4px;
-    width: 50%;
+  .wordcamp-sponsors li {
+    vertical-align: top !important;
+    margin-bottom: 1.5rem; }
+  .wordcamp-sponsors li .wordcamp-sponsor {
     padding: 1.5rem; }
+  .wordcamp-sponsors .more-link {
+    display: block;
+    font-weight: 600;
+    margin-top: 1.5rem;
+    position: relative;
+    padding-right: 3rem;
+    text-decoration: none; }
+    .wordcamp-sponsors .more-link:before, .wordcamp-sponsors .more-link:after {
+      display: inline-block;
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 50%; }
+    .wordcamp-sponsors .more-link:before {
+      width: 1.5rem;
+      height: 2px;
+      background-color: currentColor;
+      margin-top: -1px; }
+    .wordcamp-sponsors .more-link:after {
+      width: 0.5rem;
+      height: 0.5rem;
+      border-right: 2px solid currentColor;
+      border-top: 2px solid currentColor;
+      transform: rotate(45deg);
+      margin-top: -0.27rem; }
+  .wordcamp-sponsors.has-grid-columns-4 {
+    text-align: center; }
     @media screen and (min-width: 540px) {
-      .wordcamp-sponsors.sponsor-grid li {
+      .wordcamp-sponsors.has-grid-columns-4 li {
         width: 33.333%; } }
     @media screen and (min-width: 992px) {
-      .wordcamp-sponsors.sponsor-grid li {
+      .wordcamp-sponsors.has-grid-columns-4 li {
         width: 20%; } }
-  .wordcamp-sponsors.sponsor-grid img {
+  @media screen and (min-width: 768px) {
+    .wordcamp-sponsors.has-grid-columns-2 li, .wordcamp-sponsors.has-grid-columns-3 li {
+      width: 50%; } }
+  .wordcamp-sponsors.has-grid-columns-2 .wordcamp-sponsor, .wordcamp-sponsors.has-grid-columns-3 .wordcamp-sponsor {
+    padding: 0 3rem 0 0; }
+  .wordcamp-sponsors.has-grid-columns-2 .wordcamp-sponsors__featured-image, .wordcamp-sponsors.has-grid-columns-3 .wordcamp-sponsors__featured-image {
+    position: relative;
+    padding-bottom: 40%;
+    border-top: 1px solid #d6d6d8; }
+  .wordcamp-sponsors.has-grid-columns-2 .wordcamp-image__featured-image-link, .wordcamp-sponsors.has-grid-columns-3 .wordcamp-image__featured-image-link {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 60%; }
+  @media screen and (min-width: 992px) {
+    .wordcamp-sponsors.has-grid-columns-3 li {
+      width: 33.333%; } }
+  .wordcamp-sponsors li {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: -4px !important;
+    width: 100%; }
+  .wordcamp-sponsors img {
     filter: grayscale(100%);
     transition: all .2s ease; }
-    .wordcamp-sponsors.sponsor-grid img:hover {
+    .wordcamp-sponsors img:hover {
       filter: grayscale(0%); }
+  .wordcamp-sponsors .wordcamp-sponsors__featured-image {
+    position: relative; }
+  .wordcamp-sponsors .wordcamp-image__featured-image-link {
+    display: block; }
+  .wordcamp-sponsors .wordcamp-sponsors__content {
+    font-size: 14px; }
 
 .entry-meta {
   position: relative;
