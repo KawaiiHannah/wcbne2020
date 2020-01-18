@@ -20,6 +20,7 @@ h2,
 .h2 {
 	@extend %text-style--h2;
 	margin-bottom: calc-rem( config( spacing, base ) * .5 );
+	margin-top: calc-rem( config( spacing, base ) * 2 );
 }
 
 

@@ -25,6 +25,11 @@ $config: (
 			alt: #aacbcc,
 			contrast: #0f3138,
 		),
+		white: (
+			base: #ffffff,
+			alt: #f6f9fa,
+			contrast: #1f1f1f,
+		)
 	),
 	typography: (
 		primary: (
@@ -37,8 +42,8 @@ $config: (
 			sizes: (
 				base: 16px,
 				small: 14px,
-				large: 24px,
-				huge: 30px,
+				large: 20px,
+				huge: 26px,
 			),
 		),
 		secondary: (

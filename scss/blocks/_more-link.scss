@@ -1,0 +1,34 @@
+.more-link {
+	display: block;
+	font-weight: config( typography, primary, weights, bold );
+	margin-bottom: calc-rem( config( spacing, base ) );
+	margin-top: calc-rem( config( spacing, base ) );
+	position: relative;
+	padding-right: calc-rem( config( spacing, base ) * 2 );
+	text-decoration: none;
+
+	&:before,
+	&:after {
+		display: inline-block;
+		content: "";
+		position: absolute;
+		right: 0;
+		top: 50%;
+	}
+
+	&:before {
+		width: calc-rem( config( spacing, base ) );
+		height: 2px;
+		background-color: currentColor;
+		margin-top: -1px;
+	}
+
+	&:after {
+		width: calc-rem( config( spacing, base ) / 3 );
+		height: calc-rem( config( spacing, base ) / 3 );
+		border-right: 2px solid currentColor;
+		border-top: 2px solid currentColor;
+		transform: rotate( 45deg );
+		margin-top: -0.25rem;
+	}
+}
