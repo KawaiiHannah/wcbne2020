@@ -397,7 +397,7 @@ h3,
   font-weight: 900;
   font-size: 1.625rem; }
 
-h4, .wordcamp-sponsors .wordcamp-sponsors__title, .wordcamp-speakers.has-grid-columns-4 .wordcamp-speakers__title,
+h4, .wordcamp-sponsors .wordcamp-sponsors__title,
 .h4, .widget-title {
   font-family: Raleway;
   font-weight: 600;
@@ -462,7 +462,6 @@ h3,
 
 h4,
 .wordcamp-sponsors .wordcamp-sponsors__title,
-.wordcamp-speakers.has-grid-columns-4 .wordcamp-speakers__title,
 .h4 {
   margin-bottom: 0.375rem; }
 
@@ -1069,6 +1068,8 @@ input[type="submit"] {
     .wordcamp-speakers.has-grid-columns-4 > li {
       width: 20%; } }
   .wordcamp-speakers.has-grid-columns-4 .wordcamp-speakers__title {
+    font-size: inherit;
+    font-weight: false;
     text-align: center; }
   .wordcamp-speakers.has-grid-columns-4 .wordcamp-image__avatar-link {
     margin-left: auto;
@@ -1098,7 +1099,7 @@ input[type="submit"] {
     display: inline-block;
     margin-right: -4px !important;
     width: 100%; }
-  .wordcamp-speakers .wordcamp-speakers__content {
+  .wordcamp-speakers .wordcamp-speaker {
     font-size: 14px; }
   .wordcamp-speakers .wordcamp-speakers__title {
     margin-bottom: 0.75rem;
@@ -1179,7 +1180,7 @@ input[type="submit"] {
     .wordcamp-speaker .wordcamp-speakers__session-link:hover {
       text-decoration: underline; }
   .wordcamp-speaker .wordcamp-speakers__session-info {
-    font-size: 1rem;
+    font-size: inherit;
     opacity: .5;
     font-style: normal; }
 
@@ -1216,6 +1217,31 @@ input[type="submit"] {
     text-decoration: none; }
     .post-navigation a:hover {
       text-decoration: underline; }
+
+.more-link {
+  display: block;
+  font-weight: 600;
+  position: relative;
+  padding-right: 3rem;
+  text-decoration: none; }
+  .more-link:before, .more-link:after {
+    display: inline-block;
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%; }
+  .more-link:before {
+    width: 1.5rem;
+    height: 2px;
+    background-color: currentColor;
+    margin-top: -1px; }
+  .more-link:after {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-right: 2px solid currentColor;
+    border-top: 2px solid currentColor;
+    transform: rotate(45deg);
+    margin-top: -0.25rem; }
 
 .entry-header,
 .home-hero {

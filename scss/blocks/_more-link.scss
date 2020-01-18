@@ -1,8 +1,6 @@
 .more-link {
 	display: block;
 	font-weight: config( typography, primary, weights, bold );
-	margin-bottom: calc-rem( config( spacing, base ) );
-	margin-top: calc-rem( config( spacing, base ) );
 	position: relative;
 	padding-right: calc-rem( config( spacing, base ) * 2 );
 	text-decoration: none;

@@ -51,7 +51,8 @@
 		}
 
 		.wordcamp-speakers__title {
-			@extend %h4;
+			font-size: inherit;
+			font-weight: config( typography, primary, weights, medium );
 			text-align: center;
 		}
 
@@ -115,7 +116,7 @@
 		width: 100%;
 	}
 
-	.wordcamp-speakers__content {
+	.wordcamp-speaker {
 		font-size: config( typography, primary, sizes, small );
 	}
 
@@ -259,7 +260,7 @@
 	}
 
 	.wordcamp-speakers__session-info {
-	    font-size: 1rem;
+	    font-size: inherit;
 	    opacity: .5;
 	    font-style: normal;
 	}
