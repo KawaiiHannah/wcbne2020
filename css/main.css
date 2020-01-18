@@ -1012,10 +1012,11 @@ input[type="submit"] {
   .wordcamp-sponsors.has-layout-list .wordcamp-sponsor {
     position: relative;
     background-color: #f0f0f1;
-    padding: 3rem;
+    padding: 3rem 1.5rem;
     box-shadow: 0 0.1rem 0.5rem rgba(0, 0, 0, 0.1); }
     @media screen and (min-width: 768px) {
       .wordcamp-sponsors.has-layout-list .wordcamp-sponsor {
+        padding: 3rem;
         padding-left: 30%; } }
   .wordcamp-sponsors.has-layout-list .wordcamp-sponsors__featured-image {
     margin-bottom: 1.5rem; }
@@ -1052,6 +1053,9 @@ input[type="submit"] {
       z-index: 2;
       border-radius: 50%; }
   @media screen and (min-width: 540px) {
+    .wordcamp-speakers.has-grid-columns-4 li {
+      width: 50%; } }
+  @media screen and (min-width: 768px) {
     .wordcamp-speakers.has-grid-columns-4 li {
       width: 33.333%; } }
   @media screen and (min-width: 992px) {
@@ -1109,7 +1113,7 @@ input[type="submit"] {
         padding-right: 3rem; } }
   .wordcamp-speakers.grey .wordcamp-speaker {
     background-color: #f0f0f1;
-    padding: 1.5rem;
+    padding: 3rem 1.5rem;
     align-content: flex-start; }
     @media screen and (min-width: 992px) {
       .wordcamp-speakers.grey .wordcamp-speaker {
@@ -1122,6 +1126,25 @@ input[type="submit"] {
     margin-top: -6rem;
     transition: all .2s ease;
     transform: translateY(0); }
+  .wordcamp-speakers.tiny {
+    margin-bottom: 2.25rem; }
+    .wordcamp-speakers.tiny > li {
+      width: 33.33%;
+      margin-bottom: 0; }
+      @media screen and (min-width: 768px) {
+        .wordcamp-speakers.tiny > li {
+          width: 20%; } }
+      @media screen and (min-width: 992px) {
+        .wordcamp-speakers.tiny > li {
+          width: 10%; } }
+    .wordcamp-speakers.tiny .wordcamp-speaker {
+      padding: 0.75rem !important; }
+    .wordcamp-speakers.tiny .wordcamp-image__avatar-link {
+      padding: 0 !important; }
+    .wordcamp-speakers.tiny .wordcamp-speakers__title {
+      display: none; }
+    .wordcamp-speakers.tiny .wordcamp-image__avatar-container {
+      margin-bottom: 0; }
 
 .wordcamp-speaker {
   display: flex;
