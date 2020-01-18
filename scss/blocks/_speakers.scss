@@ -16,11 +16,10 @@
 	.wordcamp-image__avatar-link {
 		position: relative;
 		border-radius: 50%;
-		max-width: 150px;
+		max-width: calc-rem( 150px );
 		overflow: hidden;
 		display: block;
 		padding: calc-rem( config( spacing, base ) * .5 );
-		border: 1px solid config( colors, alt, base );
 		background-color: config( colors, white, base );
 
 		img {
