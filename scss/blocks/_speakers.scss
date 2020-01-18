@@ -20,7 +20,7 @@
 		overflow: hidden;
 		display: block;
 		padding: calc-rem( config( spacing, base ) * .5 );
-		border: 1px solid config( colors, alt, alt );
+		border: 1px solid config( colors, alt, base );
 		background-color: config( colors, white, base );
 
 		img {
@@ -58,6 +58,11 @@
 		.wordcamp-image__avatar-link {
 			margin-left: auto;
 			margin-right: auto;
+			transition: all .5s ease;
+
+			&:hover {
+				padding: 0;
+			}
 		}
 
 	}
@@ -242,5 +247,20 @@
 
 	.wordcamp-speakers__sessions-list-item {
 		width: 100% !important;
+		margin-bottom: calc-rem( config( spacing, base ) * .5 );
+	}
+
+	.wordcamp-speakers__session-link {
+		text-decoration: none;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	.wordcamp-speakers__session-info {
+	    font-size: 1rem;
+	    opacity: .5;
+	    font-style: normal;
 	}
 }

@@ -12,14 +12,21 @@
 		padding: calc-rem( config( spacing, base ) );
 		height: 100%;
 		position: relative;
+
+		&:hover img {
+			filter: grayscale( 0% );
+			transform: scale( 1.1 );
+		}
 	}
 
 	// Icon only grid
 	&.has-grid-columns-4 {
 		text-align: center;
+		align-items: center;
 
 		li {
 			vertical-align: middle !important;
+			height: 100%;
 
 			@media screen and ( min-width: #{ config( grid, breakpoints, sm ) } ) {
 				width: 33.333%;
@@ -28,6 +35,10 @@
 			@media screen and ( min-width: #{ config( grid, breakpoints, lg ) } ) {
 				width: 20%;
 			}
+		}
+
+		.wordcamp-sponsor {
+			height: auto;
 		}
 	}
 
