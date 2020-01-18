@@ -1053,13 +1053,13 @@ input[type="submit"] {
       z-index: 2;
       border-radius: 50%; }
   @media screen and (min-width: 540px) {
-    .wordcamp-speakers.has-grid-columns-4 li {
+    .wordcamp-speakers.has-grid-columns-4 > li {
       width: 50%; } }
   @media screen and (min-width: 768px) {
-    .wordcamp-speakers.has-grid-columns-4 li {
+    .wordcamp-speakers.has-grid-columns-4 > li {
       width: 33.333%; } }
   @media screen and (min-width: 992px) {
-    .wordcamp-speakers.has-grid-columns-4 li {
+    .wordcamp-speakers.has-grid-columns-4 > li {
       width: 20%; } }
   .wordcamp-speakers.has-grid-columns-4 .wordcamp-speakers__title {
     text-align: center; }
@@ -1070,7 +1070,7 @@ input[type="submit"] {
     margin-left: auto;
     margin-right: auto; }
   @media screen and (min-width: 768px) {
-    .wordcamp-speakers.has-grid-columns-2 li, .wordcamp-speakers.has-grid-columns-3 li {
+    .wordcamp-speakers.has-grid-columns-2 > li, .wordcamp-speakers.has-grid-columns-3 > li {
       width: 50%; } }
   .wordcamp-speakers.has-grid-columns-2 .wordcamp-speaker, .wordcamp-speakers.has-grid-columns-3 .wordcamp-speaker {
     padding: 0 3rem 0 0; }
@@ -1082,7 +1082,7 @@ input[type="submit"] {
     width: 100%;
     max-width: 60%; }
   @media screen and (min-width: 992px) {
-    .wordcamp-speakers.has-grid-columns-3 li {
+    .wordcamp-speakers.has-grid-columns-3 > li {
       width: 33.333%; } }
   .wordcamp-speakers li {
     display: inline-block;
@@ -1127,7 +1127,7 @@ input[type="submit"] {
     transition: all .2s ease;
     transform: translateY(0); }
   .wordcamp-speakers.tiny {
-    margin-bottom: 2.25rem; }
+    margin-bottom: 1.5rem; }
     .wordcamp-speakers.tiny > li {
       width: 33.33%;
       margin-bottom: 0; }
@@ -1156,6 +1156,13 @@ input[type="submit"] {
   .wordcamp-speaker > .wordcamp-image__avatar-container {
     order: 0;
     margin-bottom: 0.75rem; }
+  .wordcamp-speaker .wordcamp-speakers__sessions-list {
+    display: flex !important;
+    flex-wrap: wrap; }
+  .wordcamp-speaker .wordcamp-speakers__sessions-heading {
+    margin-top: 1.5rem; }
+  .wordcamp-speaker .wordcamp-speakers__sessions-list-item {
+    width: 100% !important; }
 
 .entry-meta {
   position: relative;

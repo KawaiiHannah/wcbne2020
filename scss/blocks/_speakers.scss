@@ -35,7 +35,7 @@
 
 	// Icon only grid
 	&.has-grid-columns-4 {
-		li {
+		> li {
 
 			@media screen and ( min-width: #{ config( grid, breakpoints, sm ) } ) {
 				width: 50%;
@@ -76,7 +76,7 @@
 	&.has-grid-columns-2,
 	&.has-grid-columns-3 {
 
-		li {
+		> li {
 			@media screen and ( min-width: #{ config( grid, breakpoints, md ) } ) {
 				width: 50%;
 			}
@@ -97,7 +97,7 @@
 	}
 
 	&.has-grid-columns-3 {
-		li {
+		> li {
 			@media screen and ( min-width: #{ config( grid, breakpoints, lg ) } ) {
 				width: 33.333%;
 			}
@@ -182,8 +182,8 @@
 
 
 	&.tiny {
-	
-		margin-bottom: calc-rem( config( spacing, base ) * 1.5 );
+
+		margin-bottom: calc-rem( config( spacing, base ) * 1 );
 
 		> li {
 			width: 33.33%;
@@ -229,5 +229,18 @@
 	> .wordcamp-image__avatar-container {
 		order: 0;
 		margin-bottom: calc-rem( config( spacing, base ) / 2 );
+	}
+
+	.wordcamp-speakers__sessions-list {
+		display: flex !important;
+		flex-wrap: wrap;
+	}
+
+	.wordcamp-speakers__sessions-heading {
+		margin-top: calc-rem( config( spacing, base ) );
+	}
+
+	.wordcamp-speakers__sessions-list-item {
+		width: 100% !important;
 	}
 }
