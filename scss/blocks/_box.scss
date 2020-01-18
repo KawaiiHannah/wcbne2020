@@ -1,8 +1,12 @@
 .box {
-	background-color: config( colors, primary, alt );
+	background-color: config( colors, page, alt );
 	padding: calc-rem( config( spacing, base ) );
 
 	@media screen and ( min-width: #{ config( grid, breakpoints, lg ) } ) {
 		padding: calc-rem( config( spacing, base ) * 2 );
 	}
+
+	.wp-block-group__inner-container > *:last-child {
+		margin-bottom: 0;
+	} 
 }

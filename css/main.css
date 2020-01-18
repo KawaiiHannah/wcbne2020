@@ -1304,11 +1304,13 @@ input[type="submit"] {
   margin-top: 1.5rem; }
 
 .box {
-  background-color: #8c46a3;
+  background-color: #f0f0f1;
   padding: 1.5rem; }
   @media screen and (min-width: 992px) {
     .box {
       padding: 3rem; } }
+  .box .wp-block-group__inner-container > *:last-child {
+    margin-bottom: 0; }
 
 .entry-meta {
   position: relative;
