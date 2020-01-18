@@ -1,0 +1,8 @@
+.box {
+	background-color: config( colors, primary, alt );
+	padding: calc-rem( config( spacing, base ) );
+
+	@media screen and ( min-width: #{ config( grid, breakpoints, lg ) } ) {
+		padding: calc-rem( config( spacing, base ) * 2 );
+	}
+}
