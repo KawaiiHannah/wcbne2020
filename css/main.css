@@ -1195,14 +1195,21 @@ input[type="submit"] {
     margin-bottom: 3rem; }
   .wordcamp-organizers .wordcamp-organizer {
     display: flex !important;
+    flex-wrap: wrap;
     position: relative;
     padding-left: 7.75rem !important;
     align-items: center;
     min-height: 6.25rem; }
+    .wordcamp-organizers .wordcamp-organizer > * {
+      width: 100%; }
   .wordcamp-organizers .wordcamp-block__item-title {
-    margin-top: auto; }
+    margin-top: auto;
+    font-size: inherit;
+    font-weight: 600; }
   .wordcamp-organizers .wordcamp-block__item-content {
     margin-bottom: auto; }
+    .wordcamp-organizers .wordcamp-block__item-content > *:last-of-type {
+      margin-bottom: 0; }
   .wordcamp-organizers .wordcamp-image__avatar-container {
     max-width: 6.25rem;
     border-radius: 50%;
