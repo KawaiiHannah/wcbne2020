@@ -54,8 +54,7 @@
 		}
 
 		.wordcamp-speakers__title {
-			font-size: inherit;
-			font-weight: config( typography, primary, weights, bold );
+			@extend %text-style--h5;
 			text-align: center;
 		}
 

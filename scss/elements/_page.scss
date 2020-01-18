@@ -46,6 +46,14 @@
 	margin-bottom: .5rem;
 }
 
+%text-style--h5 {
+	font-family: config( typography, primary, face );
+	font-weight: config( typography, primary, weights, bold );
+	font-size: inherit;
+	text-transform: uppercase;
+	margin-bottom: 0;
+}
+
 html {
 	@extend %text-style--primary;
 	font-weight: config( typography, primary, weights, regular );

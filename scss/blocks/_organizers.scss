@@ -23,9 +23,8 @@
 	}
 
 	.wordcamp-block__item-title {
+		@extend %text-style--h5;
 		margin-top: auto;
-		font-size: inherit;
-		font-weight: config( typography, primary, weights, bold );
 	}
 
 	.wordcamp-block__item-content {

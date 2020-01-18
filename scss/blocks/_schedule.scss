@@ -1,0 +1,41 @@
+.wordcamp-live-schedule__session {
+	border-top: 1px solid config( colors, alt, base );
+	padding-top: calc-rem( config( spacing, base ) * .5 );
+	padding-bottom: calc-rem( config( spacing, base ) * .5 );
+	margin-bottom: 0 !important;
+
+	a {
+		text-decoration: none;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
+
+.wordcamp-live-schedule__title {
+	@extend %text-style--h5;
+}
+
+.wordcamp-live-schedule__session-time,
+.wordcamp-live-schedule__session-speaker {
+	display: inline;
+}
+
+.wordcamp-live-schedule__session-time {
+	&:after {
+		content: " - ";
+	}
+}
+
+.wordcamp-live-schedule__session-title {
+    font-size: inherit;
+    font-weight: config( typography, primary, weights, bold );
+    margin-bottom: 0;
+}
+
+.wordcamp-live-schedule__session-speaker {
+	a {
+		color: inherit;
+	}
+}
