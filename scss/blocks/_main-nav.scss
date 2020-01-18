@@ -6,16 +6,18 @@
 		a {
 			color: inherit !important;
 			padding: calc-rem( config( spacing, base ) / 2 ) calc-rem( config( grid, page-gutter ) );
+			display: block;
+			width: 100%;
 
 			@media screen and ( min-width: #{ config( grid, breakpoints, lg ) } ) {
-				padding: calc-rem( config( spacing, base ) ) calc-rem( config( spacing, base ) * 2 );
+				padding: calc-rem( config( spacing, base ) ) calc-rem( config( spacing, base ) * 1.5 );
 				background-color: rgba( config( colors, page, base ), .75 );
 			}
 		}
 
 		.menu > li > a {
 			@media screen and ( min-width: #{ config( grid, breakpoints, lg ) } ) {
-				padding: calc-rem( config( spacing, base ) ) calc-rem( config( spacing, base ) * 2 );
+				padding: calc-rem( config( spacing, base ) ) calc-rem( config( spacing, base ) * 1.5 );
 			}
 		}
 
@@ -25,6 +27,10 @@
 
 		li {
 			text-align: left;
+
+			li {
+				width: 100%;
+			}
 		}
 
 	}

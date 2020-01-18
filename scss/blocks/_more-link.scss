@@ -1,4 +1,5 @@
-.more-link {
+.more-link,
+.wp-block-latest-posts__post-excerpt a {
 	display: block;
 	font-weight: config( typography, primary, weights, bold );
 	position: relative;

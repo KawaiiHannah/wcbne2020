@@ -663,18 +663,22 @@ input[type="submit"] {
   font-weight: 600; }
   .site-header .main-navigation a {
     color: inherit !important;
-    padding: 0.75rem 1.25rem; }
+    padding: 0.75rem 1.25rem;
+    display: block;
+    width: 100%; }
     @media screen and (min-width: 992px) {
       .site-header .main-navigation a {
-        padding: 1.5rem 3rem;
+        padding: 1.5rem 2.25rem;
         background-color: rgba(246, 249, 250, 0.75); } }
   @media screen and (min-width: 992px) {
     .site-header .main-navigation .menu > li > a {
-      padding: 1.5rem 3rem; } }
+      padding: 1.5rem 2.25rem; } }
   .site-header .main-navigation li:hover > a {
     color: #8953ac !important; }
   .site-header .main-navigation li {
     text-align: left; }
+    .site-header .main-navigation li li {
+      width: 100%; }
 
 @media screen and (min-width: 992px) {
   .site-header .main-navigation {
@@ -1233,7 +1237,7 @@ input[type="submit"] {
 
 .wordcamp-live-schedule__session-time,
 .wordcamp-live-schedule__session-speaker {
-  display: inline; }
+  display: inline !important; }
 
 .wordcamp-live-schedule__session-time:after {
   content: " - "; }
@@ -1245,6 +1249,21 @@ input[type="submit"] {
 
 .wordcamp-live-schedule__session-speaker a {
   color: inherit; }
+
+.wp-block-gallery .blocks-gallery-item {
+  margin-right: 0 !important; }
+
+.wp-block-gallery figure {
+  padding-bottom: 100%;
+  position: relative; }
+  .wp-block-gallery figure img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+
+.blocks-gallery-grid {
+  width: 100%; }
 
 .entry-meta {
   position: relative;
@@ -1280,24 +1299,29 @@ input[type="submit"] {
     .post-navigation a:hover {
       text-decoration: underline; }
 
-.more-link {
+.more-link,
+.wp-block-latest-posts__post-excerpt a {
   display: block;
   font-weight: 600;
   position: relative;
   padding-right: 3rem;
   text-decoration: none; }
-  .more-link:before, .more-link:after {
+  .more-link:before, .more-link:after,
+  .wp-block-latest-posts__post-excerpt a:before,
+  .wp-block-latest-posts__post-excerpt a:after {
     display: inline-block;
     content: "";
     position: absolute;
     right: 0;
     top: 50%; }
-  .more-link:before {
+  .more-link:before,
+  .wp-block-latest-posts__post-excerpt a:before {
     width: 1.5rem;
     height: 2px;
     background-color: currentColor;
     margin-top: -1px; }
-  .more-link:after {
+  .more-link:after,
+  .wp-block-latest-posts__post-excerpt a:after {
     width: 0.5rem;
     height: 0.5rem;
     border-right: 2px solid currentColor;
