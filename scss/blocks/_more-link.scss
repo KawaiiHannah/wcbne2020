@@ -1,5 +1,6 @@
 .more-link,
-.wp-block-latest-posts__post-excerpt a {
+.wp-block-latest-posts__post-excerpt a,
+.split-feature p a {
 	display: block;
 	font-weight: config( typography, primary, weights, bold );
 	position: relative;
