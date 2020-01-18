@@ -144,7 +144,8 @@
 
 		> li {
 			overflow: visible !important;
-			padding-top: calc-rem( config( spacing, base ) * 5 );
+			padding-top: calc-rem( config( spacing, base ) * 2.5 );
+			margin-bottom: calc-rem( config( spacing, base ) * 2 );
 
 			@media screen and ( min-width: #{ config( grid, breakpoints, md ) } ) {
 				padding-right: calc-rem( config( spacing, base ) * 2 );

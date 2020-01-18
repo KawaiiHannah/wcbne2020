@@ -1102,7 +1102,8 @@ input[type="submit"] {
     box-shadow: 0 0.1rem 0.5rem rgba(0, 0, 0, 0.1); }
   .wordcamp-speakers.grey > li {
     overflow: visible !important;
-    padding-top: 7.5rem; }
+    padding-top: 3.75rem;
+    margin-bottom: 3rem; }
     @media screen and (min-width: 768px) {
       .wordcamp-speakers.grey > li {
         padding-right: 3rem; } }
