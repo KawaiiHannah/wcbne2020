@@ -1,22 +1,88 @@
 .wp-block-latest-posts {
-	
-	li {
-		padding-top: calc-rem( config( spacing, base ) * 2 );
-		padding-bottom: calc-rem( config( spacing, base ) * 2 );
-		border-bottom: 1px solid rgba( #000, .1 );
-	}
 
-	li:first-of-type {
-		border-top: 1px solid rgba( #000, .1 );
-	}
+	padding-left: 20px !important;
+	padding-right: 20px !important;
+	font-size: calc-rem( config( typography, primary, sizes, small ) );
 
-	li > a {
-		font-size: config( typography, primary, sizes, large );
-		text-decoration: none;
+	> li {
+		width: 100%;
+		padding-top: 0;
+		padding-bottom: 0;
+		margin: 0;
 
-		&:hover {
-			text-decoration: underline;
+		@media screen and ( min-width: #{ config( grid, breakpoints, md ) } ) {
+			padding-right: calc-rem( config( spacing, base ) * 2 );
 		}
+
+	}
+
+
+	&:not(.is-grid) {
+		margin-bottom: calc-rem( config( spacing, base ) );
+
+		> li {
+			padding-top: calc-rem( config( spacing, base ) * .5 ); 
+			padding-bottom: calc-rem( config( spacing, base ) * .5 ); 
+			border-bottom: 1px solid darken( config( colors, page, alt ), 10 ) !important;
+			border-top: none !important;
+
+			&:first-of-type {
+				border-top: 1px solid darken( config( colors, page, alt ), 10 ) !important;
+			}
+
+			> a {
+				@extend %text-style--h5;
+			}
+		}
+	}
+
+
+	&.is-grid {
+
+		margin-top: calc-rem( config( spacing, base ) * 2 );
+		margin-bottom: calc-rem( config( spacing, base ) * 2 );
+
+		> li {
+			border-top: none !important;
+			border-bottom: none !important;
+			padding-top: 0 !important;
+			padding-bottom: calc-rem( config( spacing, base ) );
+
+			> a {
+				border-top: 1px solid darken( config( colors, page, alt ), 10 ) !important;
+				padding-top: calc-rem( config( spacing, base ) );
+				@extend %h3;
+				display: block;
+				line-height: 1;
+				margin-bottom: 0;
+			}
+
+			.wp-block-latest-posts__post-excerpt,
+			.wp-block-latest-posts__post-excerpt > a {
+				margin-top: calc-rem( config( spacing, base ) );
+			}
+		}
+
+		&.columns-2 {
+			> li {
+
+				@media screen and ( min-width: #{ config( grid, breakpoints, md ) } ) {
+					width: 50%;
+				}
+				
+			}
+		}
+
+		&.columns-3 {
+			> li {
+
+				@media screen and ( min-width: #{ config( grid, breakpoints, md ) } ) {
+					width: 33.333%;
+				}
+				
+			}
+		}
+
 	}
 
 }
