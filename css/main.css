@@ -915,7 +915,8 @@ input[type="submit"] {
   z-index: 6;
   box-shadow: 0rem 0rem 4rem rgba(0, 0, 0, 0.1); }
   .callout.wp-block-cover .wp-block-cover__inner-container {
-    color: inherit; }
+    color: inherit;
+    max-width: 50rem; }
 
 .wp-block-latest-posts {
   padding-left: 20px !important;
@@ -1414,6 +1415,12 @@ input[type="submit"] {
     border-top: 2px solid currentColor;
     transform: rotate(45deg);
     margin-top: -0.25rem; }
+
+.social-links a {
+  opacity: .5;
+  transition: all .2s ease; }
+  .social-links a:hover {
+    opacity: 1; }
 
 .entry-header,
 .home-hero {
