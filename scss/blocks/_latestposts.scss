@@ -16,9 +16,13 @@
 
 	}
 
+	a {
+		text-decoration: none;
+	}
+
 
 	&:not(.is-grid) {
-		margin-bottom: calc-rem( config( spacing, base ) );
+		margin-bottom: calc-rem( config( spacing, base ) * 2 );
 
 		> li {
 			padding-top: calc-rem( config( spacing, base ) * .5 ); 
@@ -39,7 +43,7 @@
 
 	&.is-grid {
 
-		margin-top: calc-rem( config( spacing, base ) * 2 );
+		margin-top: calc-rem( config( spacing, base ) );
 		margin-bottom: calc-rem( config( spacing, base ) * 2 );
 
 		> li {
