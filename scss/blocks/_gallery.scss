@@ -1,5 +1,9 @@
 .wp-block-gallery {
 	margin-bottom: calc-rem( config( spacing, base ) * 2 );
+
+	&.alignfull {
+		margin-bottom: 0;
+	}
 	
 	.blocks-gallery-item {
 		margin-right: 0 !important;

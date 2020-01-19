@@ -61,7 +61,7 @@
 .home-hero {
 	position: relative;
 	z-index: 0;
-	margin-bottom: -15%;
+	margin-bottom: -5%;
 
 	@media screen and (min-width: #{ config( grid, breakpoints, md ) } ) {
 		padding-bottom: 20%;

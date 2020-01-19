@@ -4,6 +4,11 @@
 	padding-right: 20px !important;
 	font-size: calc-rem( config( typography, primary, sizes, small ) );
 
+	.wp-block-column & {
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+	}
+
 	> li {
 		width: 100%;
 		padding-top: 0;
@@ -45,6 +50,14 @@
 
 		margin-top: calc-rem( config( spacing, base ) );
 		margin-bottom: calc-rem( config( spacing, base ) * 2 );
+
+		&.single-column {
+
+			> li {
+				width: 100% !important;
+				margin-right: 0;
+			}
+		}
 
 		> li {
 			border-top: none !important;
