@@ -626,7 +626,7 @@ input[type="submit"] {
     background-image: url("https://2020.brisbane.wordcamp.org/files/2019/12/image-mask.png");
     background-size: 100% auto;
     background-position: bottom center;
-    bottom: 0; }
+    bottom: -1px; }
 
 .home-hero .wp-block-cover__inner-container {
   color: #1f1f1f; }
