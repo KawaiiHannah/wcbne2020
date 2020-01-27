@@ -202,3 +202,41 @@
 	padding-bottom: calc-rem( config( spacing, base ) * 1.5 );
 	margin-bottom: 0 !important;
 }
+
+
+
+.error404 {
+
+	.search-field {
+		height: 56px;
+		border-top-left-radius: 4em;
+		border-bottom-left-radius: 4em;
+		border-right: none;
+		margin-right: -4px;
+		padding-top: 0;
+		padding-bottom: 0;
+		padding-left: calc-rem( config( spacing, base ) );
+	}
+
+	.search-submit {
+		height: 56px;
+		border-top-left-radius: 0;
+		border-bottom-left-radius: 0;
+	}
+	
+	.page-title {
+		@extend %h2;
+	}
+
+	.site-main {
+		@extend %container;
+		padding-left: 20px;
+		padding-right: 20px;
+		margin-top: 0;
+	}
+
+	.not-found {
+		padding-top: calc-rem( config( spacing, base ) * 4 );
+		padding-bottom: calc-rem( config( spacing, base ) * 2 );
+	}
+}

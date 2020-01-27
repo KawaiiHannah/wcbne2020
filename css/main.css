@@ -380,7 +380,7 @@ html, .entry-title:after {
 
 h1, .single .entry-title,
 .h1, h2, .split-feature h3, .blog .entry-title,
-.archive .entry-title,
+.archive .entry-title, .error404 .page-title,
 .h2 {
   font-family: "Playfair Display";
   font-weight: 900; }
@@ -390,7 +390,7 @@ h1, .single .entry-title,
   font-size: 5.625rem; }
 
 h2, .split-feature h3, .blog .entry-title,
-.archive .entry-title,
+.archive .entry-title, .error404 .page-title,
 .h2 {
   font-size: 3rem; }
 
@@ -464,6 +464,7 @@ h2,
 .split-feature h3,
 .blog .entry-title,
 .archive .entry-title,
+.error404 .page-title,
 .h2 {
   margin-bottom: 0.75rem;
   margin-top: 3rem;
@@ -496,7 +497,7 @@ th {
 .site-info, .paper-texture .wp-block-group__inner-container,
 .comments-area .wp-block-group__inner-container, .entry-meta, .comments-area > *, .post-navigation .nav-links, .blog .site-main > header h1,
 .archive .site-main > header h1, .blog article.post,
-.archive article.post,
+.archive article.post, .error404 .site-main,
 .container {
   max-width: 1170px;
   padding-left: 20px;
@@ -1618,6 +1619,30 @@ input[type="submit"] {
   padding-top: 2.25rem;
   padding-bottom: 2.25rem;
   margin-bottom: 0 !important; }
+
+.error404 .search-field {
+  height: 56px;
+  border-top-left-radius: 4em;
+  border-bottom-left-radius: 4em;
+  border-right: none;
+  margin-right: -4px;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 1.5rem; }
+
+.error404 .search-submit {
+  height: 56px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0; }
+
+.error404 .site-main {
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: 0; }
+
+.error404 .not-found {
+  padding-top: 6rem;
+  padding-bottom: 3rem; }
 
 .entry-header,
 .home-hero {
