@@ -164,12 +164,18 @@
 
 	.entry-image img {
 		position: fixed;
-		top: 0;
-		left: 0;
+		top: 50%;
+		left: 50%;
 		z-index: 0;
-		width: 100%;
-		height: auto;
+		width: auto;
+		height: 100%;
 		max-width: none;
+		transform: translate( -50%, -50% );
+
+		@media screen and (min-width: 768px) { 
+			width: 100%;
+			height: auto;
+		}
 	}
 
 	.entry-header {
@@ -182,6 +188,7 @@
 	    z-index: 5;
 	    background-color: config( colors, page, base );
 	    padding-bottom: 0;
+	    padding-bottom: calc-rem( config( spacing, base ) * 2 );
 	}
 }
 
@@ -189,5 +196,5 @@
 	background-color: #efeef0;
 	padding-top: calc-rem( config( spacing, base ) * 1.5 );
 	padding-bottom: calc-rem( config( spacing, base ) * 1.5 );
-	margin-bottom: 0;
+	margin-bottom: 0 !important;
 }
