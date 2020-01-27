@@ -378,13 +378,13 @@ html, .entry-title:after {
 .has-medium-font-size {
   font-size: 1.25rem; }
 
-h1, .single .entry-title, .blog article.post:first-of-type .entry-header:after,
+h1, .single .entry-title,
 .h1, h2, .split-feature h3, .blog .entry-title,
 .h2 {
   font-family: "Playfair Display";
   font-weight: 900; }
 
-h1, .single .entry-title, .blog article.post:first-of-type .entry-header:after,
+h1, .single .entry-title,
 .h1 {
   font-size: 5.625rem; }
 
@@ -491,7 +491,7 @@ th {
 .entry-content > *, .custom-header, .home-hero .wp-block-cover__inner-container, .entry-title,
 .entry-image, .site-header .main-navigation, #secondary-sidebar,
 .site-info, .paper-texture .wp-block-group__inner-container,
-.comments-area .wp-block-group__inner-container, .entry-meta, .comments-area > *, .post-navigation .nav-links,
+.comments-area .wp-block-group__inner-container, .entry-meta, .comments-area > *, .post-navigation .nav-links, .blog .site-main > header h1, .blog article.post,
 .container {
   max-width: 1170px;
   padding-left: 20px;
@@ -1436,15 +1436,6 @@ input[type="submit"] {
   .social-links a:hover {
     opacity: 1; }
 
-.blog article.post:first-of-type .entry-header:after {
-  content: "Blog";
-  display: inline-block; }
-
-.blog article.post + article.post .entry-header {
-  background: none !important;
-  padding-top: 0;
-  padding-bottom: 0; }
-
 .blog .entry-title:after {
   display: none; }
 
@@ -1459,6 +1450,81 @@ input[type="submit"] {
     text-decoration: none; }
     .blog .entry-meta a:hover {
       text-decoration: underline; }
+
+.blog .page-title.screen-reader-text {
+  border: 0;
+  clip: auto !important;
+  clip-path: none !important;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  padding: 0;
+  position: relative !important;
+  width: auto !important;
+  word-wrap: normal !important; }
+
+.blog .site-main > header {
+  padding-top: 40%;
+  padding-bottom: 20%;
+  background-image: url("https://2020.brisbane.wordcamp.org/files/2019/12/wcbne-hero-default.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+  background-attachment: fixed; }
+  .blog .site-main > header:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(https://2020.brisbane.wordcamp.org/files/2019/12/image-mask.png);
+    background-position: bottom center;
+    bottom: 0;
+    width: 100%;
+    height: 100%; }
+  .blog .site-main > header h1 {
+    margin-left: auto !important;
+    margin-right: auto !important; }
+
+.blog .entry-header {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  background: none; }
+  .blog .entry-header:after {
+    display: none !important; }
+
+.blog .entry-content {
+  margin-top: 0; }
+
+@media screen and (min-width: 768px) {
+  .blog .entry-image {
+    position: absolute;
+    width: 30%;
+    left: 0;
+    top: 0; } }
+
+@media screen and (min-width: 768px) {
+  .blog .entry-header,
+  .blog .entry-content,
+  .blog .entry-footer {
+    padding-left: 35%; } }
+
+.blog .entry-footer p {
+  padding-left: 20px;
+  padding-right: 20px; }
+  .blog .entry-footer p a {
+    text-decoration: none;
+    margin-right: 2rem; }
+
+.blog article.post .entry-title {
+  margin-bottom: 0; }
+
+.blog article.post .entry-meta {
+  margin-bottom: 1rem; }
+
+.blog .entry-header:before,
+.blog .entry-header:after {
+  display: none; }
 
 .entry-header,
 .home-hero {
