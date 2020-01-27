@@ -1544,9 +1544,9 @@ input[type="submit"] {
 .blog .entry-header:after {
   display: none; }
 
-.single-post .entry-header,
 .single-post .entry-image {
-  position: static; }
+  position: static;
+  z-index: 2; }
 
 .single-post .entry-title {
   position: relative;
@@ -1567,14 +1567,14 @@ input[type="submit"] {
       height: auto; } }
 
 .single-post .entry-header {
-  padding-bottom: 15%; }
+  padding-bottom: 0; }
 
 .single-post .entry-content {
-  margin-top: -5%;
+  margin-top: 0;
+  padding-top: 3rem;
   position: relative;
   z-index: 5;
   background-color: #f6f9fa;
-  padding-bottom: 0;
   padding-bottom: 3rem; }
 
 .post-navigation {

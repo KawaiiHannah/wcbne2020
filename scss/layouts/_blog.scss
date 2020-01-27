@@ -152,9 +152,9 @@
 
 
 .single-post {
-	.entry-header,
 	.entry-image {
 		position: static;
+		z-index: 2;
 	}
 
 	.entry-title {
@@ -179,15 +179,15 @@
 	}
 
 	.entry-header {
-		padding-bottom: 15%;
+		padding-bottom: 0;
 	}
 
 	.entry-content {
-	    margin-top: -5%;
+	    margin-top: 0;
+	    padding-top: calc-rem( config( spacing, base ) * 2 );
 	    position: relative;
 	    z-index: 5;
 	    background-color: config( colors, page, base );
-	    padding-bottom: 0;
 	    padding-bottom: calc-rem( config( spacing, base ) * 2 );
 	}
 }
