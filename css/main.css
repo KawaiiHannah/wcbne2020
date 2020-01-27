@@ -378,17 +378,17 @@ html, .entry-title:after {
 .has-medium-font-size {
   font-size: 1.25rem; }
 
-h1, .single .entry-title,
-.h1, h2, .split-feature h3,
+h1, .single .entry-title, .blog article.post:first-of-type .entry-header:after,
+.h1, h2, .split-feature h3, .blog .entry-title,
 .h2 {
   font-family: "Playfair Display";
   font-weight: 900; }
 
-h1, .single .entry-title,
+h1, .single .entry-title, .blog article.post:first-of-type .entry-header:after,
 .h1 {
   font-size: 5.625rem; }
 
-h2, .split-feature h3,
+h2, .split-feature h3, .blog .entry-title,
 .h2 {
   font-size: 3rem; }
 
@@ -460,6 +460,7 @@ a {
  */
 h2,
 .split-feature h3,
+.blog .entry-title,
 .h2 {
   margin-bottom: 0.75rem;
   margin-top: 3rem;
@@ -1334,6 +1335,10 @@ input[type="submit"] {
   .split-feature .wp-block-cover:hover:before {
     opacity: .6; }
 
+.split-feature p {
+  text-shadow: 0 0.15rem 1rem rgba(0, 0, 0, 0.8);
+  font-weight: 600; }
+
 .split-feature a {
   color: inherit !important;
   text-decoration: none; }
@@ -1431,8 +1436,44 @@ input[type="submit"] {
   .social-links a:hover {
     opacity: 1; }
 
+.blog article.post:first-of-type .entry-header:after {
+  content: "Blog";
+  display: inline-block; }
+
+.blog article.post + article.post .entry-header {
+  background: none !important;
+  padding-top: 0;
+  padding-bottom: 0; }
+
+.blog .entry-title:after {
+  display: none; }
+
+.blog .entry-title a {
+  text-decoration: none; }
+  .blog .entry-title a:hover {
+    text-decoration: underline; }
+
+.blog .entry-meta {
+  font-weight: inherit; }
+  .blog .entry-meta a {
+    text-decoration: none; }
+    .blog .entry-meta a:hover {
+      text-decoration: underline; }
+
 .entry-header,
 .home-hero {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center; }
+
+.mt-0 {
+  margin-top: 0; }
+
+.mb-0 {
+  margin-bottom: 0; }
+
+.pl-0 {
+  padding-left: 0; }
+
+.pr-0 {
+  padding-left: 0; }

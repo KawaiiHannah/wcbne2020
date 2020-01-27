@@ -1,0 +1,48 @@
+.blog {
+
+	article.post:first-of-type {
+		.entry-header {
+			&:after {
+				@extend %h1;
+				content: "Blog";
+				display: inline-block;
+			}
+		}
+	}
+
+	article.post + article.post {
+		.entry-header {
+			background: none !important;
+			padding-top: 0;
+			padding-bottom: 0;
+		}
+	}
+
+	.entry-title {
+		@extend %h2;
+
+		&:after {
+			display: none;
+		}
+
+		a {
+			text-decoration: none;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+
+	.entry-meta {
+		font-weight: inherit;
+
+		a {
+			text-decoration: none;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}
