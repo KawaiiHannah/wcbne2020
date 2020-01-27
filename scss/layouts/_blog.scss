@@ -226,6 +226,8 @@
 	
 	.page-title {
 		@extend %h2;
+		position: relative;
+		z-index: 5;
 	}
 
 	.site-main {

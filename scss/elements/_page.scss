@@ -25,17 +25,32 @@
 
 %text-style--h1 {
 	@extend %text-style--large-headings;
-	font-size: calc-rem( config( typography, secondary, sizes, large ) );
+	font-size: calc-rem( config( typography, secondary, sizes, large ) * .5 );
+	line-height: 1.1;
+
+	@media screen and ( min-width: #{ config( grid, breakpoints, md ) } ) {
+		font-size: calc-rem( config( typography, secondary, sizes, large ) );
+	}
 }
 
 %text-style--h2 {
 	@extend %text-style--large-headings;
-	font-size: calc-rem( config( typography, secondary, sizes, base ) );
+	font-size: calc-rem( config( typography, secondary, sizes, base ) * .6 );
+	line-height: 1.2;
+
+	@media screen and ( min-width: #{ config( grid, breakpoints, md ) } ) {
+		font-size: calc-rem( config( typography, secondary, sizes, base ) );
+	}
 }
 
 %text-style--h3 {
 	font-weight: config( typography, primary, weights, black );
-	font-size: calc-rem( config( typography, primary, sizes, huge ) );
+	font-size: calc-rem( config( typography, primary, sizes, huge ) * .7 );
+	line-height: 1.4;
+
+	@media screen and ( min-width: #{ config( grid, breakpoints, md ) } ) {
+		font-size: calc-rem( config( typography, primary, sizes, huge ) );
+	}
 }
 
 %text-style--h4 {
