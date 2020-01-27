@@ -380,6 +380,7 @@ html, .entry-title:after {
 
 h1, .single .entry-title,
 .h1, h2, .split-feature h3, .blog .entry-title,
+.archive .entry-title,
 .h2 {
   font-family: "Playfair Display";
   font-weight: 900; }
@@ -389,6 +390,7 @@ h1, .single .entry-title,
   font-size: 5.625rem; }
 
 h2, .split-feature h3, .blog .entry-title,
+.archive .entry-title,
 .h2 {
   font-size: 3rem; }
 
@@ -461,6 +463,7 @@ a {
 h2,
 .split-feature h3,
 .blog .entry-title,
+.archive .entry-title,
 .h2 {
   margin-bottom: 0.75rem;
   margin-top: 3rem;
@@ -491,7 +494,9 @@ th {
 .entry-content > *, .custom-header, .home-hero .wp-block-cover__inner-container, .entry-title,
 .entry-image, .site-header .main-navigation, #secondary-sidebar,
 .site-info, .paper-texture .wp-block-group__inner-container,
-.comments-area .wp-block-group__inner-container, .entry-meta, .comments-area > *, .post-navigation .nav-links, .blog .site-main > header h1, .blog article.post,
+.comments-area .wp-block-group__inner-container, .entry-meta, .comments-area > *, .post-navigation .nav-links, .blog .site-main > header h1,
+.archive .site-main > header h1, .blog article.post,
+.archive article.post,
 .container {
   max-width: 1170px;
   padding-left: 20px;
@@ -1439,22 +1444,29 @@ input[type="submit"] {
   .social-links a:hover {
     opacity: 1; }
 
-.blog .entry-title:after {
+.blog .entry-title:after,
+.archive .entry-title:after {
   display: none; }
 
-.blog .entry-title a {
+.blog .entry-title a,
+.archive .entry-title a {
   text-decoration: none; }
-  .blog .entry-title a:hover {
+  .blog .entry-title a:hover,
+  .archive .entry-title a:hover {
     text-decoration: underline; }
 
-.blog .entry-meta {
+.blog .entry-meta,
+.archive .entry-meta {
   font-weight: inherit; }
-  .blog .entry-meta a {
+  .blog .entry-meta a,
+  .archive .entry-meta a {
     text-decoration: none; }
-    .blog .entry-meta a:hover {
+    .blog .entry-meta a:hover,
+    .archive .entry-meta a:hover {
       text-decoration: underline; }
 
-.blog .page-title.screen-reader-text {
+.blog .page-title.screen-reader-text,
+.archive .page-title.screen-reader-text {
   border: 0;
   clip: auto !important;
   clip-path: none !important;
@@ -1469,10 +1481,12 @@ input[type="submit"] {
   word-wrap: normal !important;
   z-index: 5; }
 
-.blog .site-main {
+.blog .site-main,
+.archive .site-main {
   padding-bottom: 3rem; }
 
-.blog .site-main > header {
+.blog .site-main > header,
+.archive .site-main > header {
   padding-top: 40%;
   padding-bottom: 20%;
   background-image: url("https://2020.brisbane.wordcamp.org/files/2019/12/wcbne-hero-default.jpg");
@@ -1482,7 +1496,8 @@ input[type="submit"] {
   background-attachment: fixed;
   position: relative;
   margin-bottom: -10%; }
-  .blog .site-main > header:after {
+  .blog .site-main > header:after,
+  .archive .site-main > header:after {
     content: "";
     display: block;
     position: absolute;
@@ -1494,22 +1509,27 @@ input[type="submit"] {
     bottom: 0;
     width: 100%;
     height: 100%; }
-  .blog .site-main > header h1 {
+  .blog .site-main > header h1,
+  .archive .site-main > header h1 {
     margin-left: auto !important;
     margin-right: auto !important; }
 
-.blog .entry-header {
+.blog .entry-header,
+.archive .entry-header {
   padding-top: 0 !important;
   padding-bottom: 0 !important;
   background: none; }
-  .blog .entry-header:after {
+  .blog .entry-header:after,
+  .archive .entry-header:after {
     display: none !important; }
 
-.blog .entry-content {
+.blog .entry-content,
+.archive .entry-content {
   margin-top: 0; }
 
 @media screen and (min-width: 768px) {
-  .blog .entry-image {
+  .blog .entry-image,
+  .archive .entry-image {
     position: absolute;
     width: 30%;
     left: 0;
@@ -1518,34 +1538,46 @@ input[type="submit"] {
 @media screen and (min-width: 768px) {
   .blog .entry-header,
   .blog .entry-content,
-  .blog .entry-footer {
+  .blog .entry-footer,
+  .archive .entry-header,
+  .archive .entry-content,
+  .archive .entry-footer {
     padding-left: 35%; } }
 
-.blog .entry-footer p {
+.blog .entry-footer p,
+.archive .entry-footer p {
   padding-left: 20px;
   padding-right: 20px; }
-  .blog .entry-footer p a {
+  .blog .entry-footer p a,
+  .archive .entry-footer p a {
     text-decoration: none;
     margin-right: 2rem; }
 
 @media screen and (min-width: 768px) {
-  .blog article.post {
+  .blog article.post,
+  .archive article.post {
     min-height: 14.25em; } }
 
-.blog article.post .entry-title {
+.blog article.post .entry-title,
+.archive article.post .entry-title {
   margin-bottom: 0; }
 
-.blog article.post .entry-meta {
+.blog article.post .entry-meta,
+.archive article.post .entry-meta {
   margin-bottom: 1rem; }
 
 @media screen and (min-width: 768px) {
   .blog article.post .entry-content > *,
-  .blog article.post .entry-header > * {
+  .blog article.post .entry-header > *,
+  .archive article.post .entry-content > *,
+  .archive article.post .entry-header > * {
     padding-left: 0;
     padding-right: 0; } }
 
 .blog .entry-header:before,
-.blog .entry-header:after {
+.blog .entry-header:after,
+.archive .entry-header:before,
+.archive .entry-header:after {
   display: none; }
 
 .single-post .entry-image {
