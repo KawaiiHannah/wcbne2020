@@ -157,7 +157,9 @@
 
 
 .single-post,
-.page {
+.page,
+.single-wcb_session,
+.single-wcb_speaker {
 	.entry-image {
 		position: static;
 		z-index: 2;
