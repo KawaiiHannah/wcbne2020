@@ -1470,12 +1470,14 @@ input[type="submit"] {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top center;
-  background-attachment: fixed; }
+  background-attachment: fixed;
+  position: relative;
+  margin-bottom: -10%; }
   .blog .site-main > header:after {
     content: "";
     display: block;
     position: absolute;
-    top: 0;
+    top: auto;
     left: 0;
     background-image: url(https://2020.brisbane.wordcamp.org/files/2019/12/image-mask.png);
     background-position: bottom center;
@@ -1516,11 +1518,21 @@ input[type="submit"] {
     text-decoration: none;
     margin-right: 2rem; }
 
+@media screen and (min-width: 768px) {
+  .blog article.post {
+    min-height: 12.25em; } }
+
 .blog article.post .entry-title {
   margin-bottom: 0; }
 
 .blog article.post .entry-meta {
   margin-bottom: 1rem; }
+
+@media screen and (min-width: 768px) {
+  .blog article.post .entry-content > *,
+  .blog article.post .entry-header > * {
+    padding-left: 0;
+    padding-right: 0; } }
 
 .blog .entry-header:before,
 .blog .entry-header:after {

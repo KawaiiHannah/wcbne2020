@@ -49,12 +49,14 @@
 		background-size:  cover;
 		background-position: top center;
 		background-attachment: fixed;
+		position: relative;
+		margin-bottom: -10%;
 
 		&:after {
 			content: "";
 			display: block;
 			position: absolute;
-			top: 0;
+			top: auto;
 			left: 0;
 			background-image: url(https://2020.brisbane.wordcamp.org/files/2019/12/image-mask.png);
 		    background-position: bottom center;
@@ -113,6 +115,10 @@
 
 	article.post {
 		@extend %container;
+		
+		@media screen and (min-width: 768px) {
+			min-height: 12.25em;
+		}
 
 		.entry-title {
 			margin-bottom: 0;
@@ -120,6 +126,16 @@
 
 		.entry-meta {
 			margin-bottom: 1rem;
+		}
+
+		.entry-content,
+		.entry-header {
+			> * {
+				@media screen and (min-width: 768px) {
+					padding-left: 0;
+					padding-right: 0;
+				}
+			}
 		}
 	}
 
